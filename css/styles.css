@@ -21,9 +21,10 @@
   --font-hero:    "Helvetica Neue", Helvetica, Arial, "Liberation Sans", sans-serif;
 
   /* Hero placeholder art — swap these for real photos, e.g.
-     --hero-left: url('images/hero-left.jpg');  (background-size:cover is preset) */
-  --hero-left:  linear-gradient(135deg, #b9a892 0%, #8f7a63 45%, #6a5644 100%);
-  --hero-right: linear-gradient(135deg, #d3c1a6 0%, #a88f72 50%, #786250 100%);
+     --hero-left: url('images/hero-left.jpg');  (background-size:cover is preset)
+     Graded light->dark top-to-bottom so a dark nav reads up top. */
+  --hero-left:  linear-gradient(165deg, #ddd1be 0%, #b6a284 44%, #7a634e 100%);
+  --hero-right: linear-gradient(165deg, #e2d6c2 0%, #bba488 46%, #806a54 100%);
 
   /* Fluid type scale (clamp: min, preferred, max) */
   --fs-hero:  clamp(2.5rem, 6vw + 1rem, 5rem);
@@ -121,35 +122,24 @@ a { color: inherit; text-decoration: none; transition: color var(--transition); 
 .btn--ghost { background: transparent; border-color: var(--color-text); color: var(--color-text); }
 .btn--ghost:hover { background: var(--color-text); color: var(--color-bg); }
 
-/* Enquire button — adapts to header state via --hdr-fg */
-.btn--enquire {
-  background: transparent;
-  border-color: currentColor;
-  color: var(--hdr-fg, var(--color-text));
-}
-.btn--enquire:hover {
-  background: var(--hdr-fg, var(--color-text));
-  color: var(--color-bg);
-}
 
 /* ============================================================
    HEADER / NAV  (global — transparent over hero, cream on scroll)
    ============================================================ */
 .site-header {
-  --hdr-fg: #ffffff;                 /* light text while over the hero */
-  --hdr-muted: rgba(255,255,255,.82);
+  /* Dark ink over the hero's light top (matches the reference nav) */
+  --hdr-fg: var(--color-text);
+  --hdr-muted: color-mix(in srgb, var(--color-text) 72%, transparent);
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
   background: transparent;
   border-bottom: 1px solid transparent;
   transition: background var(--transition), border-color var(--transition),
-              box-shadow var(--transition), color var(--transition);
+              box-shadow var(--transition);
 }
-/* Solid cream state once scrolled past the hero */
+/* Solid cream state once you start scrolling */
 .site-header.is-scrolled {
-  --hdr-fg: var(--color-text);
-  --hdr-muted: var(--color-muted);
   background: color-mix(in srgb, var(--color-bg) 92%, transparent);
   backdrop-filter: blur(10px);
   border-bottom-color: var(--color-line);
@@ -221,7 +211,23 @@ a { color: inherit; text-decoration: none; transition: color var(--transition); 
 .nav__list a:hover { color: var(--hdr-fg); }
 .nav__list a:hover::after { width: 100%; }
 
-.header__cta { margin-left: .5rem; }
+/* Underlined text CTA (matches the reference's right-side link) */
+.header__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  margin-left: 1rem;
+  padding-bottom: 3px;
+  font-size: var(--fs-small);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--hdr-fg);
+  border-bottom: 1px solid currentColor;
+}
+.header__cta svg { transition: transform var(--transition); }
+.header__cta:hover { color: var(--color-accent); }
+.header__cta:hover svg { transform: translateX(3px); }
 
 /* Hamburger */
 .nav-toggle {
@@ -270,7 +276,7 @@ a { color: inherit; text-decoration: none; transition: color var(--transition); 
     gap: 1.75rem;
   }
   .nav__list a { font-size: 1.15rem; letter-spacing: 0.1em; }
-  .header__cta { margin-left: 0; padding: 1rem 2.5rem; }
+  .header__cta { margin-left: 0; font-size: 1rem; }
 
   /* Animate hamburger to X */
   .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
@@ -321,9 +327,15 @@ main > section { padding-block: var(--space-section); }
 .hero__scrim {
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(90deg, rgba(24,18,13,.55) 0%, rgba(24,18,13,.12) 45%, rgba(24,18,13,0) 70%),
-    linear-gradient(180deg, rgba(24,18,13,.42) 0%, rgba(24,18,13,.05) 28%, rgba(24,18,13,.05) 62%, rgba(24,18,13,.5) 100%);
+  /* Clear at the very top (dark nav reads on the light photo),
+     darker through the headline band, dark again at the bottom blurb. */
+  background: linear-gradient(180deg,
+    rgba(22,16,11,0)    0%,
+    rgba(22,16,11,0)    9%,
+    rgba(22,16,11,.40) 34%,
+    rgba(22,16,11,.46) 56%,
+    rgba(22,16,11,.24) 72%,
+    rgba(22,16,11,.50) 100%);
 }
 
 .hero__row { position: relative; z-index: 1; width: 100%; }
