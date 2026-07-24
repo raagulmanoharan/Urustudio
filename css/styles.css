@@ -18,7 +18,7 @@
   /* Typography */
   --font-display: "Cormorant Garamond", Georgia, serif;
   --font-body:    "Jost", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-hero:    "Cinzel", "Cormorant Garamond", Georgia, serif;
+  --font-hero:    "Outfit", system-ui, -apple-system, "Segoe UI", sans-serif;
 
   /* Hero photo (path is relative to this stylesheet in css/) */
   --hero-image: url('../images/Uru_Hero.jpg');
@@ -314,11 +314,11 @@ main > section { padding-block: var(--space-section); }
   display: flex;
   flex-direction: column;
   font-family: var(--font-hero);
-  font-weight: 600;
-  line-height: 1.12;
-  letter-spacing: 0.03em;
+  font-weight: 300;
+  line-height: 1.28;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  font-size: clamp(2rem, 5.4vw, 4.2rem);
+  font-size: clamp(1.9rem, 5vw, 3.9rem);
   text-shadow: 0 2px 24px rgba(0,0,0,.32);
 }
 /* Staggered / staircase layout */
