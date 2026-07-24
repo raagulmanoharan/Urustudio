@@ -18,7 +18,7 @@
   /* Typography */
   --font-display: "Cormorant Garamond", Georgia, serif;
   --font-body:    "Jost", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-hero:    "Rosarivo", "Cormorant Garamond", Georgia, serif;
+  --font-hero:    "Jost", system-ui, -apple-system, "Segoe UI", sans-serif;
 
   /* Hero photo (path is relative to this stylesheet in css/) */
   --hero-image: url('../images/Uru_Hero_Drama.jpg');
@@ -262,11 +262,11 @@ main > section { padding-block: var(--space-section); }
    ============================================================ */
 .hero {
   position: relative;
-  /* Capped height so the wide photo isn't over-cropped (keeps the left space) */
-  min-height: clamp(600px, 92vh, 860px);
-  display: grid;
-  grid-template-rows: 1fr auto;
-  padding-block: var(--header-h) clamp(1.5rem, 4vw, 3rem);
+  min-height: 100vh;
+  min-height: 100svh;               /* fill the viewport (crop is fine) */
+  display: flex;
+  align-items: center;
+  padding-block: calc(var(--header-h) + 1rem) clamp(1.5rem, 4vw, 3rem);
   overflow: hidden;
   color: #fff;
   isolation: isolate;
@@ -285,66 +285,56 @@ main > section { padding-block: var(--space-section); }
 .hero__scrim {
   position: absolute;
   inset: 0;
-  /* Dark on the left (white logo + headline read), clear on the right
-     to keep the subject; light top/bottom veils for the nav and blurb. */
+  /* Strong on the left so the copy reads over the pillars; clears to the
+     right to keep the subject; light veils top (nav) and bottom. */
   background:
     linear-gradient(90deg,
-      rgba(20,14,9,.62) 0%,
-      rgba(20,14,9,.32) 34%,
-      rgba(20,14,9,0)   62%),
+      rgba(18,12,8,.80) 0%,
+      rgba(18,12,8,.58) 26%,
+      rgba(18,12,8,.20) 50%,
+      rgba(18,12,8,0)   68%),
     linear-gradient(180deg,
-      rgba(20,14,9,.36) 0%,
-      rgba(20,14,9,.05) 24%,
-      rgba(20,14,9,.05) 66%,
-      rgba(20,14,9,.46) 100%);
+      rgba(18,12,8,.34) 0%,
+      rgba(18,12,8,0)   20%,
+      rgba(18,12,8,0)   82%,
+      rgba(18,12,8,.30) 100%);
 }
 
-.hero__row { position: relative; z-index: 1; width: 100%; }
-.hero__row--main { align-self: center; }
-.hero__row--aside { align-self: end; display: flex; justify-content: flex-end; }
-
-/* Eyebrow */
-.hero__eyebrow {
-  font-style: italic;
-  font-size: clamp(.85rem, 1.4vw, 1.05rem);
-  margin: 0 0 clamp(.5rem, 1.4vw, 1rem) .25em;
-  opacity: .95;
+/* Left copy column */
+.hero__content { position: relative; z-index: 1; width: 100%; }
+.hero__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: clamp(1.4rem, 3vw, 2.2rem);
+  max-width: 44rem;
 }
 
-/* Oversized headline with staircase indents */
 .hero__title {
   display: flex;
   flex-direction: column;
   font-family: var(--font-hero);
-  font-weight: 400;                 /* Rosarivo ships a single weight */
-  line-height: 1.0;
-  letter-spacing: 0;
-  font-size: clamp(2.9rem, 10vw, 8rem);
+  font-weight: 500;
+  line-height: 0.94;
+  letter-spacing: -0.015em;
+  font-size: clamp(2.75rem, 7.5vw, 5.5rem);
   text-wrap: balance;
-  text-shadow: 0 2px 30px rgba(0,0,0,.28);
+  text-shadow: 0 2px 24px rgba(0,0,0,.32);
 }
-.hero__title span:nth-child(2) { margin-left: 0.4em; }
-.hero__title span:nth-child(3) { margin-left: 1.7em; }
 
-/* Bottom-right blurb + pill */
-.hero__aside {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 1.1rem;
-  max-width: 24rem;
-  text-align: right;
-}
 .hero__desc {
-  font-size: clamp(.85rem, 1.1vw, 1rem);
-  line-height: 1.55;
-  opacity: .92;
+  max-width: 32rem;
+  font-size: clamp(1rem, 1.05vw, 1.1rem);
+  line-height: 1.6;
+  color: rgba(255,255,255,.9);
+  text-shadow: 0 1px 12px rgba(0,0,0,.35);
 }
+
 .hero__pill {
   display: inline-flex;
   align-items: center;
   gap: .55rem;
-  padding: .85rem 1.8rem;
+  padding: .9rem 1.9rem;
   background: #fff;
   color: var(--color-text);
   border-radius: 999px;
@@ -352,6 +342,7 @@ main > section { padding-block: var(--space-section); }
   letter-spacing: 0.08em;
   text-transform: uppercase;
   font-weight: 500;
+  box-shadow: 0 10px 30px rgba(0,0,0,.18);
   transition: background var(--transition), color var(--transition), transform var(--transition);
 }
 .hero__pill:hover { background: var(--color-accent); color: #fff; }
@@ -359,11 +350,8 @@ main > section { padding-block: var(--space-section); }
 
 /* Mobile hero tweaks */
 @media (max-width: 640px) {
-  .hero__media { background-position: 38% center; }
-  .hero__title span:nth-child(2) { margin-left: 0.25em; }
-  .hero__title span:nth-child(3) { margin-left: 0.9em; }
-  .hero__row--aside { justify-content: flex-start; }
-  .hero__aside { align-items: flex-start; text-align: left; max-width: 30rem; }
+  .hero__media { background-position: 34% center; }
+  .hero__title { font-size: clamp(2.6rem, 13vw, 3.8rem); }
 }
 
 /* ---- Light section below the hero ---- */
