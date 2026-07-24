@@ -20,8 +20,8 @@
   --font-body:    "Jost", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-hero:    "Helvetica Neue", Helvetica, Arial, "Liberation Sans", sans-serif;
 
-  /* Hero photo — place the file at images/hero.jpg (or change this path) */
-  --hero-image: url('images/hero.jpg');
+  /* Hero photo */
+  --hero-image: url('images/Uru_Hero_Mandapam_16x9.png');
 
   /* Fluid type scale (clamp: min, preferred, max) */
   --fs-hero:  clamp(2.5rem, 6vw + 1rem, 5rem);

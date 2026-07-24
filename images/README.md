@@ -1,7 +1,7 @@
 # Images
 
-Place the hero photo here as **`hero.jpg`** (the CSS references `images/hero.jpg`
-via the `--hero-image` token in `css/styles.css`).
+The hero photo is **`Uru_Hero_Mandapam_16x9.png`**, referenced via the
+`--hero-image` token in `css/styles.css`.
 
 - Recommended: a wide landscape image (~1600–2400px wide), optimized JPG/WebP.
 - The hero uses `background-size: cover; background-position: center`, so the
