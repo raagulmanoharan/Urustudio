@@ -363,7 +363,6 @@ main > section { padding-block: var(--space-section); }
   .hero__title span:nth-child(3) { margin-left: 0.9em; }
   .hero__row--aside { justify-content: flex-start; }
   .hero__aside { align-items: flex-start; text-align: left; max-width: 30rem; }
-  .hero__panel::after { font-size: .6rem; letter-spacing: .15em; }
 }
 
 /* ---- Light section below the hero ---- */
