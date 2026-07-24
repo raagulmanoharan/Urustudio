@@ -127,9 +127,9 @@ a { color: inherit; text-decoration: none; transition: color var(--transition); 
    HEADER / NAV  (global — transparent over hero, cream on scroll)
    ============================================================ */
 .site-header {
-  /* Dark ink over the hero's light top (matches the reference nav) */
-  --hdr-fg: var(--color-text);
-  --hdr-muted: color-mix(in srgb, var(--color-text) 72%, transparent);
+  /* White ink while over the hero */
+  --hdr-fg: #ffffff;
+  --hdr-muted: rgba(255,255,255,.82);
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
@@ -138,8 +138,10 @@ a { color: inherit; text-decoration: none; transition: color var(--transition); 
   transition: background var(--transition), border-color var(--transition),
               box-shadow var(--transition);
 }
-/* Solid cream state once you start scrolling */
+/* Solid cream + dark ink once you start scrolling */
 .site-header.is-scrolled {
+  --hdr-fg: var(--color-text);
+  --hdr-muted: var(--color-muted);
   background: color-mix(in srgb, var(--color-bg) 92%, transparent);
   backdrop-filter: blur(10px);
   border-bottom-color: var(--color-line);
@@ -154,31 +156,13 @@ a { color: inherit; text-decoration: none; transition: color var(--transition); 
   min-height: var(--header-h);
 }
 
-/* Wordmark — Tamil உரு + Latin Uru */
+/* Wordmark — textured typewriter logotype */
 .brand {
-  display: inline-flex;
-  align-items: baseline;
-  gap: .5rem;
+  font-family: "Special Elite", "Courier New", monospace;
+  font-size: 1.55rem;
+  letter-spacing: 0.06em;
   color: var(--hdr-fg);
   line-height: 1;
-}
-.brand__ta {
-  font-family: "Noto Serif Tamil", var(--font-display), serif;
-  font-size: 1.6rem;
-  font-weight: 600;
-}
-.brand__sep {
-  width: 1px;
-  height: 1.1rem;
-  align-self: center;
-  background: currentColor;
-  opacity: .4;
-}
-.brand__en {
-  font-family: var(--font-display);
-  font-size: 1.4rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
 }
 
 /* Desktop nav — links centre/right */
@@ -327,14 +311,14 @@ main > section { padding-block: var(--space-section); }
 .hero__scrim {
   position: absolute;
   inset: 0;
-  /* Clear at the very top (dark nav reads on the light photo),
-     darker through the headline band, dark again at the bottom blurb. */
+  /* Darker at the top (white nav reads), through the headline band,
+     and at the bottom blurb; lighter in the gaps. */
   background: linear-gradient(180deg,
-    rgba(22,16,11,0)    0%,
-    rgba(22,16,11,0)    9%,
-    rgba(22,16,11,.40) 34%,
-    rgba(22,16,11,.46) 56%,
-    rgba(22,16,11,.24) 72%,
+    rgba(22,16,11,.52)  0%,
+    rgba(22,16,11,.30) 16%,
+    rgba(22,16,11,.42) 40%,
+    rgba(22,16,11,.46) 60%,
+    rgba(22,16,11,.28) 74%,
     rgba(22,16,11,.50) 100%);
 }
 
