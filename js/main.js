@@ -32,13 +32,42 @@
     });
   }
 
-  /* ---- Header shadow on scroll ---- */
+  /* ---- Transparent-over-hero → solid cream once past it ---- */
   const header = document.getElementById("site-header");
   if (header) {
+    const hero = document.querySelector("[data-hero]");
+    const solidPoint = () => {
+      if (hero) return hero.offsetHeight - header.offsetHeight;
+      return 60; // fallback if no hero present
+    };
     const onScroll = () =>
-      header.classList.toggle("is-scrolled", window.scrollY > 8);
+      header.classList.toggle("is-scrolled", window.scrollY > solidPoint());
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll, { passive: true });
+  }
+
+  /* ---- Reveal-on-scroll (restrained fade + rise) ---- */
+  const revealEls = document.querySelectorAll(".reveal");
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (revealEls.length) {
+    if (reduceMotion || !("IntersectionObserver" in window)) {
+      revealEls.forEach((el) => el.classList.add("is-visible"));
+    } else {
+      const observer = new IntersectionObserver(
+        (entries, obs) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              obs.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.15, rootMargin: "0px 0px -8% 0px" }
+      );
+      revealEls.forEach((el) => observer.observe(el));
+    }
   }
 
   /* ---- Current year in footer ---- */

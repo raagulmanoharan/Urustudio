@@ -4,29 +4,33 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Artisanal, handcrafted wedding return gifts — thoughtfully made keepsakes your guests will cherish." />
-  <title>Uru Studio — Artisanal Wedding Return Gifts</title>
+  <title>Uru — Artisanal Wedding Return Gifts</title>
 
   <!-- Fonts (neutral defaults — easy to swap later) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&family=Noto+Serif+Tamil:wght@500;600&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <!-- ============ HEADER / NAV ============ -->
+  <!-- ============ HEADER / NAV (global) ============ -->
   <header class="site-header" id="site-header">
     <div class="container header__inner">
-      <a href="#" class="brand" aria-label="Uru Studio home">Uru<span>Studio</span></a>
+      <a href="#" class="brand" aria-label="Uru — home">
+        <span class="brand__ta" lang="ta">உரு</span>
+        <span class="brand__sep" aria-hidden="true"></span>
+        <span class="brand__en">Uru</span>
+      </a>
 
       <nav class="nav" id="primary-nav" aria-label="Primary">
         <ul class="nav__list">
-          <li><a href="#collections">Collections</a></li>
-          <li><a href="#story">Our Story</a></li>
-          <li><a href="#process">Craft</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#craft">Craft</a></li>
+          <li><a href="#collection">Collection</a></li>
+          <li><a href="#occasions">Occasions</a></li>
+          <li><a href="#order">Order</a></li>
         </ul>
-        <a href="#contact" class="btn btn--primary nav__cta">Enquire</a>
+        <a href="#enquire" class="btn btn--enquire header__cta">Enquire</a>
       </nav>
 
       <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
@@ -36,20 +40,39 @@
   </header>
 
   <main>
-    <!-- Sections will be added here, one at a time, as you describe them. -->
-    <section class="placeholder container">
-      <p class="eyebrow">Foundation ready</p>
-      <h1>Let's build, section by section.</h1>
-      <p class="placeholder__lead">Responsive layout, theming variables, and a working mobile nav are in place. Describe your first section and I'll build it.</p>
+    <!-- TEMPORARY hero stand-in so the transparent bar + reveals are demonstrable.
+         Will be replaced when you describe the real hero section. -->
+    <section class="hero-temp" data-hero id="top">
+      <div class="container hero-temp__inner">
+        <p class="eyebrow reveal">Handcrafted in India</p>
+        <h1 class="hero-temp__title reveal" data-reveal-delay="1">Return gifts, made to be remembered.</h1>
+        <p class="hero-temp__lead reveal" data-reveal-delay="2">Describe your hero section and I'll build it here. This placeholder shows the global elements working — the transparent bar, the wordmark, and gentle reveals.</p>
+      </div>
+    </section>
+
+    <!-- A light section below, so scrolling demonstrates the bar solidifying to cream. -->
+    <section class="demo-scroll container" id="craft">
+      <p class="eyebrow reveal">Scroll check</p>
+      <h2 class="reveal" data-reveal-delay="1">The bar turns cream once you scroll past the hero.</h2>
+      <p class="reveal" data-reveal-delay="2">Elements fade and rise in as they enter view — restrained, as befits the brand. Real sections will replace this.</p>
     </section>
   </main>
 
   <!-- ============ FOOTER ============ -->
   <footer class="site-footer">
     <div class="container footer__inner">
-      <p>&copy; <span id="year"></span> Uru Studio. Handcrafted with care.</p>
+      <p>&copy; <span id="year"></span> Uru. Handcrafted with care.</p>
     </div>
   </footer>
+
+  <!-- ============ Floating WhatsApp (mobile) ============ -->
+  <a href="https://wa.me/91XXXXXXXXXX?text=Hi%20Uru%2C%20I%27d%20like%20to%20enquire%20about%20return%20gifts."
+     class="wa-float" id="wa-float" target="_blank" rel="noopener"
+     aria-label="Chat with us on WhatsApp">
+    <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true" focusable="false">
+      <path fill="currentColor" d="M16.003 3.2c-7.06 0-12.8 5.74-12.8 12.8 0 2.257.59 4.463 1.712 6.408L3.2 28.8l6.55-1.69a12.74 12.74 0 006.253 1.63h.005c7.06 0 12.8-5.74 12.8-12.8s-5.745-12.74-12.805-12.74zm0 23.06h-.004a10.63 10.63 0 01-5.42-1.484l-.39-.23-4.04 1.043 1.078-3.94-.253-.404a10.6 10.6 0 01-1.62-5.646c0-5.86 4.77-10.63 10.638-10.63 2.84 0 5.51 1.108 7.52 3.12a10.56 10.56 0 013.114 7.518c0 5.86-4.77 10.63-10.63 10.63zm5.83-7.96c-.32-.16-1.89-.933-2.183-1.04-.293-.107-.507-.16-.72.16-.213.32-.826 1.04-1.013 1.253-.187.213-.373.24-.693.08-.32-.16-1.35-.498-2.57-1.586-.95-.847-1.59-1.893-1.777-2.213-.187-.32-.02-.493.14-.652.144-.143.32-.373.48-.56.16-.187.213-.32.32-.533.107-.213.053-.4-.027-.56-.08-.16-.72-1.733-.986-2.373-.26-.624-.524-.54-.72-.55l-.613-.01c-.213 0-.56.08-.853.4-.293.32-1.12 1.093-1.12 2.666s1.146 3.093 1.306 3.306c.16.213 2.253 3.44 5.46 4.826.763.33 1.36.527 1.824.674.767.244 1.464.21 2.016.127.615-.092 1.89-.773 2.156-1.52.267-.746.267-1.386.187-1.52-.08-.133-.293-.213-.613-.373z"/>
+    </svg>
+  </a>
 
   <script src="js/main.js"></script>
 </body>
