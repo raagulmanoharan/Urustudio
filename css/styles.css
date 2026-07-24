@@ -18,7 +18,7 @@
   /* Typography */
   --font-display: "Cormorant Garamond", Georgia, serif;
   --font-body:    "Jost", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-hero:    "Helvetica Neue", Helvetica, Arial, "Liberation Sans", sans-serif;
+  --font-hero:    "Rosarivo", "Cormorant Garamond", Georgia, serif;
 
   /* Hero photo (path is relative to this stylesheet in css/) */
   --hero-image: url('../images/Uru_Hero_Drama.jpg');
@@ -316,12 +316,13 @@ main > section { padding-block: var(--space-section); }
   display: flex;
   flex-direction: column;
   font-family: var(--font-hero);
-  font-weight: 700;
+  font-weight: 400;                 /* Rosarivo ships a single weight */
   text-transform: uppercase;
-  line-height: .9;
-  letter-spacing: -0.02em;
-  font-size: clamp(2.75rem, 11vw, 8.5rem);
+  line-height: .98;
+  letter-spacing: 0.01em;
+  font-size: clamp(2.6rem, 9.5vw, 7.25rem);
   text-wrap: balance;
+  text-shadow: 0 2px 30px rgba(0,0,0,.28);
 }
 .hero__title span:nth-child(2) { margin-left: 0.4em; }
 .hero__title span:nth-child(3) { margin-left: 1.7em; }
