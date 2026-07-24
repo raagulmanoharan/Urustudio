@@ -307,7 +307,7 @@ main > section { padding-block: var(--space-section); }
   flex-direction: column;
   align-items: flex-start;
   gap: clamp(1.4rem, 3vw, 2.2rem);
-  max-width: 44rem;
+  max-width: 46rem;
 }
 
 .hero__title {
@@ -316,12 +316,15 @@ main > section { padding-block: var(--space-section); }
   font-family: var(--font-hero);
   font-optical-sizing: auto;
   font-weight: 640;
-  line-height: 0.96;
+  line-height: 1.0;
   letter-spacing: -0.01em;
-  font-size: clamp(2.75rem, 7.5vw, 5.5rem);
-  text-wrap: balance;
+  font-size: clamp(2.5rem, 6.8vw, 5rem);
   text-shadow: 0 2px 24px rgba(0,0,0,.32);
 }
+/* Staggered / staircase layout */
+.hero__title span:nth-child(2) { margin-left: 0.9em; }
+.hero__title span:nth-child(3) { margin-left: 1.9em; }
+.hero__em { font-style: italic; }
 
 .hero__desc {
   max-width: 32rem;
@@ -352,7 +355,9 @@ main > section { padding-block: var(--space-section); }
 /* Mobile hero tweaks */
 @media (max-width: 640px) {
   .hero__media { background-position: 34% center; }
-  .hero__title { font-size: clamp(2.6rem, 13vw, 3.8rem); }
+  .hero__title { font-size: clamp(2.3rem, 12vw, 3.6rem); }
+  .hero__title span:nth-child(2) { margin-left: 0.6em; }
+  .hero__title span:nth-child(3) { margin-left: 1.2em; }
 }
 
 /* ---- Light section below the hero ---- */
