@@ -289,15 +289,16 @@ main > section { padding-block: var(--space-section); }
      right to keep the subject; light veils top (nav) and bottom. */
   background:
     linear-gradient(90deg,
-      rgba(18,12,8,.80) 0%,
-      rgba(18,12,8,.58) 26%,
-      rgba(18,12,8,.20) 50%,
-      rgba(18,12,8,0)   68%),
+      rgba(18,12,8,.90) 0%,
+      rgba(18,12,8,.72) 28%,
+      rgba(18,12,8,.38) 52%,
+      rgba(18,12,8,.10) 72%,
+      rgba(18,12,8,0)   84%),
     linear-gradient(180deg,
-      rgba(18,12,8,.34) 0%,
-      rgba(18,12,8,0)   20%,
-      rgba(18,12,8,0)   82%,
-      rgba(18,12,8,.30) 100%);
+      rgba(18,12,8,.46) 0%,
+      rgba(18,12,8,.12) 22%,
+      rgba(18,12,8,.12) 80%,
+      rgba(18,12,8,.44) 100%);
 }
 
 /* Left copy column */
@@ -320,7 +321,7 @@ main > section { padding-block: var(--space-section); }
   line-height: 1.12;
   letter-spacing: 0.015em;
   text-transform: uppercase;
-  font-size: clamp(2.1rem, 5.4vw, 4.15rem);
+  font-size: clamp(2.5rem, 6.4vw, 5.1rem);
   text-shadow: 0 2px 24px rgba(0,0,0,.32);
 }
 /* Staggered / staircase layout */
@@ -356,7 +357,7 @@ main > section { padding-block: var(--space-section); }
 /* Mobile hero tweaks */
 @media (max-width: 640px) {
   .hero__media { background-position: 34% center; }
-  .hero__title { font-size: clamp(1.7rem, 9vw, 2.9rem); }
+  .hero__title { font-size: clamp(2rem, 10.5vw, 3.5rem); }
   .hero__title span:nth-child(2) { margin-left: 0.6em; }
   .hero__title span:nth-child(3) { margin-left: 1.2em; }
 }
