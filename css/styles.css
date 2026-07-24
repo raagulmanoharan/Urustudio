@@ -314,12 +314,13 @@ main > section { padding-block: var(--space-section); }
   display: flex;
   flex-direction: column;
   font-family: var(--font-hero);
-  font-weight: 1;                          /* Google Sans Flex — thinnest */
-  font-variation-settings: "wght" 1;
-  line-height: 1.3;
-  letter-spacing: 0.1em;
+  font-weight: 300;                        /* Google Sans Flex — light, not hairline */
+  font-variation-settings: "wght" 300;
+  font-kerning: normal;
+  line-height: 1.12;
+  letter-spacing: 0.015em;
   text-transform: uppercase;
-  font-size: clamp(2rem, 5.4vw, 4.3rem);
+  font-size: clamp(2.1rem, 5.4vw, 4.15rem);
   text-shadow: 0 2px 24px rgba(0,0,0,.32);
 }
 /* Staggered / staircase layout */
