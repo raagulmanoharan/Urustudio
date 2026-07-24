@@ -18,10 +18,10 @@
   /* Typography */
   --font-display: "Cormorant Garamond", Georgia, serif;
   --font-body:    "Jost", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-hero:    "Fraunces", "Cormorant Garamond", Georgia, serif;
+  --font-hero:    "Cinzel", "Cormorant Garamond", Georgia, serif;
 
   /* Hero photo (path is relative to this stylesheet in css/) */
-  --hero-image: url('../images/Uru_Hero_Drama.jpg');
+  --hero-image: url('../images/Uru_Hero.jpg');
 
   /* Fluid type scale (clamp: min, preferred, max) */
   --fs-hero:  clamp(2.5rem, 6vw + 1rem, 5rem);
@@ -314,17 +314,16 @@ main > section { padding-block: var(--space-section); }
   display: flex;
   flex-direction: column;
   font-family: var(--font-hero);
-  font-optical-sizing: auto;
-  font-weight: 640;
-  line-height: 1.0;
-  letter-spacing: -0.01em;
-  font-size: clamp(2.5rem, 6.8vw, 5rem);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-size: clamp(2rem, 5.4vw, 4.2rem);
   text-shadow: 0 2px 24px rgba(0,0,0,.32);
 }
 /* Staggered / staircase layout */
 .hero__title span:nth-child(2) { margin-left: 0.9em; }
 .hero__title span:nth-child(3) { margin-left: 1.9em; }
-.hero__em { font-style: italic; }
 
 .hero__desc {
   max-width: 32rem;
@@ -355,7 +354,7 @@ main > section { padding-block: var(--space-section); }
 /* Mobile hero tweaks */
 @media (max-width: 640px) {
   .hero__media { background-position: 34% center; }
-  .hero__title { font-size: clamp(2.3rem, 12vw, 3.6rem); }
+  .hero__title { font-size: clamp(1.7rem, 9vw, 2.9rem); }
   .hero__title span:nth-child(2) { margin-left: 0.6em; }
   .hero__title span:nth-child(3) { margin-left: 1.2em; }
 }
