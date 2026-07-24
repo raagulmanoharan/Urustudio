@@ -40,21 +40,42 @@
   </header>
 
   <main>
-    <!-- TEMPORARY hero stand-in so the transparent bar + reveals are demonstrable.
-         Will be replaced when you describe the real hero section. -->
-    <section class="hero-temp" data-hero id="top">
-      <div class="container hero-temp__inner">
-        <p class="eyebrow reveal">Handcrafted in India</p>
-        <h1 class="hero-temp__title reveal" data-reveal-delay="1">Return gifts, made to be remembered.</h1>
-        <p class="hero-temp__lead reveal" data-reveal-delay="2">Describe your hero section and I'll build it here. This placeholder shows the global elements working — the transparent bar, the wordmark, and gentle reveals.</p>
+    <!-- ============ HERO ============ -->
+    <section class="hero" data-hero id="top">
+      <!-- Split image (placeholder panels — swap --hero-left / --hero-right for real photos) -->
+      <div class="hero__media" aria-hidden="true">
+        <div class="hero__panel hero__panel--left"></div>
+        <div class="hero__panel hero__panel--right"></div>
+        <div class="hero__scrim"></div>
+      </div>
+
+      <div class="hero__row hero__row--main container">
+        <div class="hero__headline">
+          <p class="hero__eyebrow reveal">Whatever you feel</p>
+          <h1 class="hero__title">
+            <span class="reveal">We design</span>
+            <span class="reveal" data-reveal-delay="1">the feeling</span>
+            <span class="reveal" data-reveal-delay="2">of you</span>
+          </h1>
+        </div>
+      </div>
+
+      <div class="hero__row hero__row--aside container">
+        <div class="hero__aside reveal" data-reveal-delay="2">
+          <p class="hero__desc">Should guide your new experience, one step at a time, toward your dreamspace living.</p>
+          <a href="#enquire" class="hero__pill">
+            Get my feeling
+            <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
       </div>
     </section>
 
-    <!-- A light section below, so scrolling demonstrates the bar solidifying to cream. -->
+    <!-- Light section so scrolling still demonstrates the bar solidifying to cream. -->
     <section class="demo-scroll container" id="craft">
-      <p class="eyebrow reveal">Scroll check</p>
-      <h2 class="reveal" data-reveal-delay="1">The bar turns cream once you scroll past the hero.</h2>
-      <p class="reveal" data-reveal-delay="2">Elements fade and rise in as they enter view — restrained, as befits the brand. Real sections will replace this.</p>
+      <p class="eyebrow reveal">Up next</p>
+      <h2 class="reveal" data-reveal-delay="1">The section below the hero comes next.</h2>
+      <p class="reveal" data-reveal-delay="2">Scroll up — the bar turned cream once you passed the hero. Describe the next section and it replaces this.</p>
     </section>
   </main>
 
