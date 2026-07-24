@@ -20,11 +20,8 @@
   --font-body:    "Jost", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-hero:    "Helvetica Neue", Helvetica, Arial, "Liberation Sans", sans-serif;
 
-  /* Hero placeholder art — swap these for real photos, e.g.
-     --hero-left: url('images/hero-left.jpg');  (background-size:cover is preset)
-     Graded light->dark top-to-bottom so a dark nav reads up top. */
-  --hero-left:  linear-gradient(165deg, #ddd1be 0%, #b6a284 44%, #7a634e 100%);
-  --hero-right: linear-gradient(165deg, #e2d6c2 0%, #bba488 46%, #806a54 100%);
+  /* Hero photo — place the file at images/hero.jpg (or change this path) */
+  --hero-image: url('images/hero.jpg');
 
   /* Fluid type scale (clamp: min, preferred, max) */
   --fs-hero:  clamp(2.5rem, 6vw + 1rem, 5rem);
@@ -275,38 +272,31 @@ main > section { padding-block: var(--space-section); }
   isolation: isolate;
 }
 
-/* Split placeholder image */
-.hero__media { position: absolute; inset: 0; z-index: -1; display: flex; }
-.hero__panel {
-  position: relative;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Full-bleed hero photo */
+.hero__media {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-color: #6f5a46;            /* warm fallback until the photo loads */
+  background-image: var(--hero-image);
   background-size: cover;
   background-position: center;
-}
-.hero__panel--left  { flex: 0 0 56%; background-image: var(--hero-left); }
-.hero__panel--right { flex: 1 1 auto; background-image: var(--hero-right); }
-/* Placeholder label — remove once real photos are in */
-.hero__panel::after {
-  content: "IMAGE PLACEHOLDER";
-  font: 500 .7rem/1 var(--font-body);
-  letter-spacing: 0.22em;
-  color: rgba(255,255,255,.5);
 }
 .hero__scrim {
   position: absolute;
   inset: 0;
-  /* Darker at the top (white nav reads), through the headline band,
-     and at the bottom blurb; lighter in the gaps. */
-  background: linear-gradient(180deg,
-    rgba(22,16,11,.52)  0%,
-    rgba(22,16,11,.30) 16%,
-    rgba(22,16,11,.42) 40%,
-    rgba(22,16,11,.46) 60%,
-    rgba(22,16,11,.28) 74%,
-    rgba(22,16,11,.50) 100%);
+  /* Dark on the left (white logo + headline read), clear on the right
+     to keep the subject; light top/bottom veils for the nav and blurb. */
+  background:
+    linear-gradient(90deg,
+      rgba(20,14,9,.62) 0%,
+      rgba(20,14,9,.32) 34%,
+      rgba(20,14,9,0)   62%),
+    linear-gradient(180deg,
+      rgba(20,14,9,.36) 0%,
+      rgba(20,14,9,.05) 24%,
+      rgba(20,14,9,.05) 66%,
+      rgba(20,14,9,.46) 100%);
 }
 
 .hero__row { position: relative; z-index: 1; width: 100%; }
