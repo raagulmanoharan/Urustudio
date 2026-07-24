@@ -262,8 +262,8 @@ main > section { padding-block: var(--space-section); }
    ============================================================ */
 .hero {
   position: relative;
-  min-height: 100vh;
-  min-height: 100svh;
+  /* Capped height so the wide photo isn't over-cropped (keeps the left space) */
+  min-height: clamp(600px, 92vh, 860px);
   display: grid;
   grid-template-rows: 1fr auto;
   padding-block: var(--header-h) clamp(1.5rem, 4vw, 3rem);
@@ -280,7 +280,7 @@ main > section { padding-block: var(--space-section); }
   background-color: #6f5a46;            /* warm fallback until the photo loads */
   background-image: var(--hero-image);
   background-size: cover;
-  background-position: center;
+  background-position: left center;     /* keep the composed empty space on the left */
 }
 .hero__scrim {
   position: absolute;
@@ -317,10 +317,9 @@ main > section { padding-block: var(--space-section); }
   flex-direction: column;
   font-family: var(--font-hero);
   font-weight: 400;                 /* Rosarivo ships a single weight */
-  text-transform: uppercase;
-  line-height: .98;
-  letter-spacing: 0.01em;
-  font-size: clamp(2.6rem, 9.5vw, 7.25rem);
+  line-height: 1.0;
+  letter-spacing: 0;
+  font-size: clamp(2.9rem, 10vw, 8rem);
   text-wrap: balance;
   text-shadow: 0 2px 30px rgba(0,0,0,.28);
 }
@@ -360,6 +359,7 @@ main > section { padding-block: var(--space-section); }
 
 /* Mobile hero tweaks */
 @media (max-width: 640px) {
+  .hero__media { background-position: 38% center; }
   .hero__title span:nth-child(2) { margin-left: 0.25em; }
   .hero__title span:nth-child(3) { margin-left: 0.9em; }
   .hero__row--aside { justify-content: flex-start; }
