@@ -4,6 +4,22 @@
    so colors / fonts / spacing can be changed in one place.
    ============================================================ */
 
+/* ---------- Self-hosted display fonts (match the Folio masthead) ---------- */
+@font-face {
+  font-family: 'Pinyon Script';   /* calligraphy flourish (the "worth" accent) */
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url('../fonts/PinyonScript-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Archivo';         /* heavy grotesque caps */
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('../fonts/Archivo-Bold.woff2') format('woff2');
+}
+
 /* ---------- Design tokens (edit these to re-theme) ---------- */
 :root {
   /* Color — neutral to start; you'll guide these */
