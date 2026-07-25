@@ -293,6 +293,9 @@ p, li, figcaption, dd { text-wrap: pretty; }
    ============================================================ */
 main > section { padding-block: var(--space-section); }
 
+/* Offset anchor jumps so the fixed header never hides a section title */
+section[id] { scroll-margin-top: calc(var(--header-h) + 1rem); }
+
 /* ============================================================
    HERO — split image, oversized grotesque headline, corner blurb
    ============================================================ */
@@ -430,6 +433,7 @@ main > section { padding-block: var(--space-section); }
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: -0.03em;
+  word-spacing: 0.12em;
 }
 .t-script {
   font-family: var(--font-script);
@@ -551,7 +555,13 @@ main > section { padding-block: var(--space-section); }
 .occasion:nth-child(3n+2) .ph { aspect-ratio: 4 / 3; }
 .occasion:nth-child(3n)   .ph { aspect-ratio: 1 / 1; }
 @media (max-width: 900px) { .occasion-grid { columns: 2; } }
-@media (max-width: 560px) { .occasion-grid { columns: 1; } }
+@media (max-width: 560px) {
+  .occasion-grid { columns: 1; }
+  /* normalize the tall masonry ratios to compact landscape in a single column */
+  .occasion:nth-child(3n+1) .ph,
+  .occasion:nth-child(3n+2) .ph,
+  .occasion:nth-child(3n)   .ph { aspect-ratio: 3 / 2; }
+}
 
 /* ---- STORY (dark) ---- */
 .story__inner { max-width: 60rem; margin-inline: auto; text-align: center; }
