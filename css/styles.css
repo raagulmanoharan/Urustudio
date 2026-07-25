@@ -88,6 +88,19 @@ img, picture, svg, video {
   height: auto;
 }
 
+/* Paper grain — a faint film over the whole page for warmth/texture */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  pointer-events: none;
+  opacity: .045;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 140px 140px;
+}
+
 h1, h2, h3, h4 {
   font-family: var(--font-display);
   font-weight: 500;
@@ -403,7 +416,7 @@ main > section { padding-block: var(--space-section); }
 
 /* Reusable masthead-style title (caps + script accent) */
 .stitle {
-  font-size: clamp(1.9rem, 4.2vw, 3.4rem);
+  font-size: clamp(2.1rem, 4.8vw, 4rem);
   line-height: 1.0;
   letter-spacing: -0.01em;
 }
@@ -515,15 +528,25 @@ main > section { padding-block: var(--space-section); }
 .collection__cta { text-align: center; margin-top: clamp(2rem, 4vw, 3rem); }
 
 /* ---- OCCASIONS ---- */
+/* Editorial masonry — varied tile heights, not a uniform grid */
 .occasion-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: clamp(1.5rem, 3vw, 2.5rem);
+  columns: 3;
+  column-gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+.occasion {
+  break-inside: avoid;
+  margin-bottom: clamp(1.75rem, 3vw, 3rem);
 }
 .occasion .ph { transition: transform var(--transition), box-shadow var(--transition); }
 .occasion:hover .ph { transform: translateY(-5px); box-shadow: var(--shadow-md); }
 .occasion h3 { font-family: var(--font-display); font-weight: 500; font-size: 1.35rem; margin: 1rem 0 .4rem; }
 .occasion p { color: var(--color-muted); font-size: .95rem; }
+/* staggered aspect ratios for magazine rhythm (override .ph--wide) */
+.occasion:nth-child(3n+1) .ph { aspect-ratio: 3 / 4; }
+.occasion:nth-child(3n+2) .ph { aspect-ratio: 4 / 3; }
+.occasion:nth-child(3n)   .ph { aspect-ratio: 1 / 1; }
+@media (max-width: 900px) { .occasion-grid { columns: 2; } }
+@media (max-width: 560px) { .occasion-grid { columns: 1; } }
 
 /* ---- STORY (dark) ---- */
 .story__inner { max-width: 60rem; margin-inline: auto; text-align: center; }
@@ -612,8 +635,8 @@ main > section { padding-block: var(--space-section); }
    ============================================================ */
 .reveal {
   opacity: 0;
-  transform: translateY(18px);
-  transition: opacity .8s ease, transform .8s cubic-bezier(.22,1,.36,1);
+  transform: translateY(24px) scale(.985);
+  transition: opacity .85s ease, transform .95s cubic-bezier(.22,1,.36,1);
   will-change: opacity, transform;
 }
 .reveal.is-visible { opacity: 1; transform: none; }
