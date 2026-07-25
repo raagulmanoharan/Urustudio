@@ -18,7 +18,8 @@
   /* Typography */
   --font-display: "Cormorant Garamond", Georgia, serif;
   --font-body:    "Jost", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-hero:    "Google Sans Flex", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-hero:    "Archivo", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-script:  "Pinyon Script", "Snell Roundhand", cursive;
 
   /* Hero photo (path is relative to this stylesheet in css/) */
   --hero-image: url('../images/Uru_Hero.jpg');
@@ -311,22 +312,34 @@ main > section { padding-block: var(--space-section); }
   max-width: 46rem;
 }
 
+/* Masthead lockup — heavy grotesque caps + calligraphy script accent
+   (mirrors the Reflections masthead: caps size set here, script scales from it,
+   line-height a fixed em so the taller script overflows and interlocks). */
 .hero__title {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  font-size: clamp(2.4rem, 7vw, 5rem);
+  line-height: 0.94em;
+  text-shadow: 0 2px 24px rgba(0,0,0,.35);
+}
+.hero__caps {
   font-family: var(--font-hero);
-  font-weight: 430;                        /* Google Sans Flex — semi bold */
-  font-variation-settings: "wght" 430;
-  font-kerning: normal;
-  line-height: 1.02;
-  letter-spacing: 0.015em;
+  font-weight: 700;
   text-transform: uppercase;
-  font-size: clamp(2.5rem, 6.4vw, 5.1rem);
-  text-shadow: 0 2px 24px rgba(0,0,0,.32);
+  letter-spacing: -0.038em;
+  font-size: 1em;
+}
+.hero__script {
+  font-family: var(--font-script);
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 1.5em;
 }
 /* Staggered / staircase layout */
-.hero__title span:nth-child(2) { margin-left: 0.9em; }
-.hero__title span:nth-child(3) { margin-left: 1.9em; }
+.hero__script { margin-left: 0.55em; }
+.hero__title span:nth-child(3) { margin-left: 1.5em; }
 
 .hero__desc {
   max-width: 32rem;
