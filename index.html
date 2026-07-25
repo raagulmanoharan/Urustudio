@@ -49,7 +49,7 @@
             <span class="reveal hero__script" data-reveal-delay="1">worth</span>
             <span class="reveal hero__caps" data-reveal-delay="2">keeping</span>
           </h1>
-          <p class="hero__desc reveal" data-reveal-delay="2">Handwoven return gifts, made to order for weddings across South India. Reed, cotton, clay — never plastic.</p>
+          <p class="hero__desc reveal" data-reveal-delay="2">Handwoven return gifts, made to order for weddings across South India. Reed, cotton, clay. No plastic in the gift.</p>
           <a href="#collection" class="hero__pill reveal" data-reveal-delay="3">
             See the pieces
             <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
@@ -66,7 +66,7 @@
         <li>Handwoven</li>
         <li>Women-led clusters</li>
         <li>Made to order</li>
-        <li>No plastic</li>
+        <li>Plastic-free</li>
       </ul>
     </section>
 
@@ -101,6 +101,22 @@
         <div class="collection__cta reveal">
           <a href="#contact" class="btn btn--ghost">Request the full lookbook</a>
         </div>
+      </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section class="section howitworks" id="how">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 class="stitle"><span class="t-caps">How it</span> <span class="t-script">works</span></h2>
+          <p class="section-head__note">Made to order, from fifty to two thousand pieces. We confirm your exact dates and price when you enquire.</p>
+        </div>
+        <ol class="steps">
+          <li class="step reveal"><span class="step__n">1</span><h3>Enquire</h3><p>Send the date, guest count, your city and budget.</p></li>
+          <li class="step reveal" data-reveal-delay="1"><span class="step__n">2</span><h3>Samples &amp; price</h3><p>We come back with a proposal, samples, and pricing — usually within two days.</p></li>
+          <li class="step reveal" data-reveal-delay="2"><span class="step__n">3</span><h3>Confirm</h3><p>Approve the pieces and count, and your batch begins on the loom.</p></li>
+          <li class="step reveal" data-reveal-delay="3"><span class="step__n">4</span><h3>Delivered</h3><p>Woven, filled, and finished — shipped to reach you before your day.</p></li>
+        </ol>
       </div>
     </section>
 
@@ -155,12 +171,12 @@
       <div class="container">
         <div class="section-head reveal">
           <h2 class="stitle"><span class="t-caps">Yours to</span> <span class="t-script">shape</span></h2>
-          <p class="section-head__note">We weave to your number in the weeks before your day — from fifty pieces to a few thousand.</p>
+          <p class="section-head__note">We weave to your number in the weeks before your day — from fifty to two thousand pieces.</p>
         </div>
         <div class="bespoke-grid">
           <div class="bespoke-item reveal"><span class="bespoke-num">01</span><h3>Personalise</h3><p>Names, dates, or a line of your own, added by hand.</p></div>
           <div class="bespoke-item reveal" data-reveal-delay="1"><span class="bespoke-num">02</span><h3>Fill it</h3><p>Choose what goes inside — sweets, seeds, soap — or leave it to us.</p></div>
-          <div class="bespoke-item reveal" data-reveal-delay="2"><span class="bespoke-num">03</span><h3>Scale</h3><p>From fifty pieces to two thousand, made to the same standard.</p></div>
+          <div class="bespoke-item reveal" data-reveal-delay="2"><span class="bespoke-num">03</span><h3>Scale</h3><p>From fifty to two thousand pieces, made to the same standard.</p></div>
         </div>
       </div>
     </section>
@@ -170,14 +186,15 @@
       <div class="container">
         <div class="section-head reveal">
           <h2 class="stitle"><span class="t-caps">What they</span> <span class="t-script">kept</span></h2>
+          <p class="section-head__note">Illustrative for now — we publish real notes as we collect them.</p>
         </div>
         <figure class="pullquote reveal" data-reveal-delay="1">
           <blockquote>The baskets stayed on our guests' shelves long after the flowers were gone.</blockquote>
-          <figcaption><b>Aparna &amp; Karthik</b><span>Wedding · Chennai</span></figcaption>
+          <figcaption><b>A couple</b><span>Chennai wedding</span></figcaption>
         </figure>
         <figure class="pullquote pullquote--right reveal" data-reveal-delay="1">
           <blockquote>Six hundred pieces, all by hand, all on time. The easiest part of the whole wedding.</blockquote>
-          <figcaption><b>Meghna R.</b><span>Planner · Bengaluru</span></figcaption>
+          <figcaption><b>A wedding planner</b><span>Bengaluru</span></figcaption>
         </figure>
       </div>
     </section>
@@ -201,7 +218,7 @@
       <div class="container enquire__grid">
         <div class="enquire__intro">
           <h2 class="stitle reveal" data-reveal-delay="1"><span class="t-caps">Tell us the</span> <span class="t-script">date</span></h2>
-          <p class="enquire__lead reveal" data-reveal-delay="2">Send the day, the guest count, and the feeling you're after. You'll get a proposal, samples, and a price — usually within two days.</p>
+          <p class="enquire__lead reveal" data-reveal-delay="2">Send the day, the guest count, your city and budget. We'll come back with a proposal, samples, and a price — usually within two days.</p>
           <div class="enquire__direct reveal" data-reveal-delay="3">
             <a href="https://wa.me/91XXXXXXXXXX?text=Hi%20Uru%2C%20I%27d%20like%20to%20start%20a%20batch." target="_blank" rel="noopener" class="enquire__link enquire__link--wa">Chat on WhatsApp</a>
             <a href="mailto:hello@uru.studio" class="enquire__link">hello@uru.studio</a>
@@ -218,12 +235,22 @@
               <input id="ef-date" name="date" type="text" placeholder="e.g. Nov 2026" />
             </div>
             <div>
+              <label for="ef-city">Delivery city</label>
+              <input id="ef-city" name="city" type="text" placeholder="e.g. Chennai" />
+            </div>
+          </div>
+          <div class="field field--split">
+            <div>
               <label for="ef-qty">Quantity</label>
-              <input id="ef-qty" name="qty" type="text" placeholder="e.g. 250" />
+              <input id="ef-qty" name="qty" type="text" placeholder="e.g. 450" />
+            </div>
+            <div>
+              <label for="ef-budget">Budget per gift</label>
+              <input id="ef-budget" name="budget" type="text" placeholder="e.g. ₹300" />
             </div>
           </div>
           <div class="field">
-            <label for="ef-msg">Tell us a little more</label>
+            <label for="ef-msg">Anything else</label>
             <textarea id="ef-msg" name="message" rows="3" placeholder="Occasion, colours, what goes inside…"></textarea>
           </div>
           <button type="submit" class="btn btn--primary enquire__submit">Send enquiry
@@ -241,7 +268,7 @@
     <div class="container footer__grid">
       <div class="footer__brand">
         <span class="brand footer__mark">uru</span>
-        <p>Artisanal wedding return gifts, handcrafted in India — small tokens of gratitude, made to be kept.</p>
+        <p>Handwoven wedding return gifts, made to order in South India — small enough to carry home, made to be kept.</p>
       </div>
       <nav class="footer__col" aria-label="Explore">
         <h4>Explore</h4>
