@@ -68,4 +68,39 @@
   /* ---- Current year in footer ---- */
   const year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
+
+  /* ---- Enquiry form → open WhatsApp with details prefilled ---- */
+  const WA_NUMBER = "91XXXXXXXXXX"; // TODO: replace with the real WhatsApp number
+  const enquire = document.getElementById("enquire-form");
+  if (enquire) {
+    enquire.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const val = (id) => (document.getElementById(id)?.value || "").trim();
+      const name = val("ef-name");
+      const date = val("ef-date");
+      const qty = val("ef-qty");
+      const msg = val("ef-msg");
+      const lines = [
+        "Hi Uru, I'd like to enquire about return gifts.",
+        name && `Name: ${name}`,
+        date && `Event date: ${date}`,
+        qty && `Quantity: ${qty}`,
+        msg && `Details: ${msg}`,
+      ].filter(Boolean);
+      const url =
+        "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(lines.join("\n"));
+      window.open(url, "_blank", "noopener");
+    });
+  }
+
+  /* ---- Newsletter signup: friendly inline confirmation (no backend) ---- */
+  const signup = document.getElementById("signup-form");
+  if (signup) {
+    signup.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const input = signup.querySelector("input");
+      if (!input || !input.value.trim()) return;
+      signup.innerHTML = '<p style="padding:.7rem 1rem;color:var(--color-accent);font-size:.9rem;">Thank you — we\'ll be in touch.</p>';
+    });
+  }
 })();
