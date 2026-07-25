@@ -496,8 +496,9 @@ main > section { padding-block: var(--space-section); }
   font-family: var(--font-hero);
   font-weight: 700;
   color: var(--color-accent);
-  font-size: .85rem;
-  letter-spacing: .05em;
+  font-size: 1.15rem;
+  letter-spacing: -0.01em;
+  min-width: 2.4ch;
 }
 
 /* ---- COLLECTION (lookbook) ---- */
@@ -661,11 +662,11 @@ main > section { padding-block: var(--space-section); }
 .manifesto__line {
   font-family: var(--font-display);
   font-weight: 500;
-  font-size: clamp(1.9rem, 4.6vw, 3.3rem);
-  line-height: 1.14;
-  letter-spacing: -0.01em;
-  margin-top: 1rem;
-  max-width: 20ch;
+  font-size: clamp(2.2rem, 5.6vw, 4.1rem);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  margin-top: 1.25rem;
+  max-width: 16ch;
 }
 .manifesto__sub { color: var(--color-muted); font-size: 1.1rem; line-height: 1.6; margin-top: 1.5rem; max-width: 42rem; }
 .chips { list-style: none; display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 2rem; }
@@ -677,14 +678,24 @@ main > section { padding-block: var(--space-section); }
 
 /* Collection — signature feature */
 .feature {
-  display: grid; grid-template-columns: 1.15fr 1fr;
-  gap: clamp(1.5rem, 4vw, 4rem); align-items: center;
-  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+  display: grid; grid-template-columns: 1.5fr 1fr;
+  align-items: center;
+  margin-bottom: clamp(3rem, 6vw, 5rem);
 }
-.feature__media .ph { aspect-ratio: 4 / 4.4; }
+.feature__media .ph { aspect-ratio: 5 / 4; }
+.feature__text {
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.75rem, 3vw, 2.75rem);
+  margin-left: -12%;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  z-index: 2;
+}
 .micro { font-size: .74rem; letter-spacing: .14em; text-transform: uppercase; color: var(--color-accent); }
 .feature__name { font-family: var(--font-display); font-weight: 500; font-size: clamp(1.8rem, 3.5vw, 2.6rem); margin: .5rem 0 1rem; }
-.feature__text > p { color: var(--color-muted); max-width: 32rem; }
+.feature__text > p { color: var(--color-muted); }
 .spec { color: var(--color-text) !important; font-size: .85rem; margin-top: 1.25rem !important; padding-top: 1rem; border-top: 1px solid var(--color-line); }
 
 /* Collection — filmstrip */
@@ -717,19 +728,19 @@ main > section { padding-block: var(--space-section); }
 
 /* Make it yours */
 .bespoke-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1.5rem, 3vw, 3rem); }
-.bespoke-item { padding-top: 1.25rem; border-top: 1px solid var(--color-line); }
-.bespoke-num { font-family: var(--font-hero); font-weight: 700; color: var(--color-accent); font-size: .85rem; }
-.bespoke-item h3 { font-family: var(--font-display); font-weight: 500; font-size: 1.35rem; margin: .6rem 0 .4rem; }
+.bespoke-item { padding-top: 1.5rem; border-top: 1px solid var(--color-line); }
+.bespoke-num { display: block; font-family: var(--font-hero); font-weight: 700; color: var(--color-accent); font-size: 2rem; letter-spacing: -0.02em; margin-bottom: .5rem; }
+.bespoke-item h3 { font-family: var(--font-display); font-weight: 500; font-size: 1.4rem; margin: 0 0 .4rem; }
 .bespoke-item p { color: var(--color-muted); font-size: .95rem; }
 
 /* Proof — pull-quotes */
 .proof .eyebrow { margin-bottom: clamp(2rem, 4vw, 3rem); }
-.pullquote { margin: 0 0 clamp(2.5rem, 6vw, 5rem); max-width: 42rem; }
+.pullquote { margin: 0 0 clamp(3rem, 7vw, 6rem); max-width: 46rem; }
 .pullquote:last-of-type { margin-bottom: 0; }
 .pullquote--right { margin-left: auto; text-align: right; }
 .pullquote blockquote {
   font-family: var(--font-display); font-weight: 500;
-  font-size: clamp(1.5rem, 3.4vw, 2.4rem); line-height: 1.3;
+  font-size: clamp(1.9rem, 4.8vw, 3.5rem); line-height: 1.18; letter-spacing: -0.015em;
 }
 .pullquote figcaption { margin-top: 1.25rem; }
 .pullquote figcaption b { display: block; }
@@ -745,6 +756,8 @@ main > section { padding-block: var(--space-section); }
 /* responsive — modern sections */
 @media (max-width: 900px) {
   .feature, .spread { grid-template-columns: 1fr; }
+  .feature__text { margin-left: 0; }
+  .feature__media .ph { aspect-ratio: 4 / 3; }
   .spread__media { order: -1; }
   .journal-grid, .bespoke-grid { grid-template-columns: 1fr 1fr; }
   .pullquote--right { text-align: left; margin-left: 0; }
