@@ -480,10 +480,13 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 1rem); }
 .ph--photo { background-size: cover; background-position: center; background-repeat: no-repeat; }
 .ph--photo::before, .ph--photo::after { display: none; }
 /* Tonal variety */
+/* NOTE: use background-image (not the `background` shorthand) so these tonal
+   placeholders don't reset background-size/position and clobber .ph--photo's
+   cover/center on the photo tiles. */
 .lookbook .product:nth-child(3n+2) .ph,
-.occasion-grid .occasion:nth-child(3n+2) .ph { background: linear-gradient(145deg, #e0e0d1, #b6b39a 55%, #8f8d72); }
+.occasion-grid .occasion:nth-child(3n+2) .ph { background-image: linear-gradient(145deg, #e0e0d1, #b6b39a 55%, #8f8d72); }
 .lookbook .product:nth-child(3n) .ph,
-.occasion-grid .occasion:nth-child(3n) .ph { background: linear-gradient(145deg, #ecd8ce, #c8a591 55%, #a67f6b); }
+.occasion-grid .occasion:nth-child(3n) .ph { background-image: linear-gradient(145deg, #ecd8ce, #c8a591 55%, #a67f6b); }
 
 /* ---- ETHOS ---- */
 .ethos { max-width: 58rem; text-align: center; }
