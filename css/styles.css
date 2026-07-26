@@ -192,7 +192,7 @@ p, li, figcaption, dd { text-wrap: pretty; }
 /* Wordmark — textured typewriter logotype, sized to match the nav */
 .brand {
   font-family: "Special Elite", "Courier New", monospace;
-  font-size: var(--fs-small);
+  font-size: 1.15rem;
   letter-spacing: 0.05em;
   color: var(--hdr-fg);
   line-height: 1;
