@@ -75,7 +75,7 @@
   if (year) year.textContent = new Date().getFullYear();
 
   /* ---- Enquiry form → open WhatsApp with details prefilled ---- */
-  const WA_NUMBER = "91XXXXXXXXXX"; // TODO: replace with the real WhatsApp number
+  const WA_NUMBER = "918056397813";
   const enquire = document.getElementById("enquire-form");
   if (enquire) {
     enquire.addEventListener("submit", (e) => {

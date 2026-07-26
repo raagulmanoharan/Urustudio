@@ -672,32 +672,6 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 1rem); }
 }
 
 /* ============================================================
-   FLOATING WHATSAPP (mobile — persistent conversion aid)
-   ============================================================ */
-.wa-float {
-  position: fixed;
-  right: 1.1rem;
-  bottom: 1.1rem;
-  z-index: 90;
-  display: none;                 /* mobile-only, enabled below */
-  align-items: center;
-  justify-content: center;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: #25d366;
-  color: #fff;
-  box-shadow: 0 6px 20px rgba(0,0,0,.22);
-  transition: transform var(--transition), box-shadow var(--transition);
-}
-.wa-float:hover { transform: scale(1.05); box-shadow: 0 8px 26px rgba(0,0,0,.28); }
-.wa-float:active { transform: scale(.97); }
-
-@media (max-width: 860px) {
-  .wa-float { display: inline-flex; }
-}
-
-/* ============================================================
    MODERN FLOW SECTIONS
    ============================================================ */
 
