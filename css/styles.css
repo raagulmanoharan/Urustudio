@@ -476,6 +476,9 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 1rem); }
 }
 .ph--wide { aspect-ratio: 3 / 2; }
 .ph--tall { aspect-ratio: 4 / 5.2; }
+/* Real photo tiles — drop the placeholder ring/label, show the image */
+.ph--photo { background-size: cover; background-position: center; background-repeat: no-repeat; }
+.ph--photo::before, .ph--photo::after { display: none; }
 /* Tonal variety */
 .lookbook .product:nth-child(3n+2) .ph,
 .occasion-grid .occasion:nth-child(3n+2) .ph { background: linear-gradient(145deg, #e0e0d1, #b6b39a 55%, #8f8d72); }
