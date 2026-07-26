@@ -35,11 +35,16 @@
   /* ---- Transparent-over-hero → solid cream once past it ---- */
   const header = document.getElementById("site-header");
   if (header) {
-    // Transparent only at rest over the hero; cream as soon as you scroll.
-    const onScroll = () =>
-      header.classList.toggle("is-scrolled", window.scrollY > 40);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
+    // Only pages with a hero start transparent; subpages (no hero) stay solid.
+    const hero = document.querySelector("[data-hero]");
+    if (!hero) {
+      header.classList.add("is-scrolled");
+    } else {
+      const onScroll = () =>
+        header.classList.toggle("is-scrolled", window.scrollY > 40);
+      onScroll();
+      window.addEventListener("scroll", onScroll, { passive: true });
+    }
   }
 
   /* ---- Reveal-on-scroll (restrained fade + rise) ---- */

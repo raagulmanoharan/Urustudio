@@ -917,3 +917,51 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 1rem); }
   outline: 2px solid var(--color-accent);
   outline-offset: 3px;
 }
+
+/* ============================================================
+   BRAND BREAKER (quiet statement after the hero)
+   ============================================================ */
+.brandnote { text-align: center; }
+.brandnote__inner { max-width: 44rem; margin: 0 auto; }
+.brandnote__line {
+  font-family: var(--font-display); font-weight: 500;
+  font-size: clamp(1.9rem, 4.4vw, 3.1rem); line-height: 1.2; letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+.brandnote__body {
+  color: var(--color-muted); font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+  line-height: 1.68; margin-top: 1.35rem; text-wrap: pretty;
+}
+
+/* Journal cards: make media + title clickable */
+.jcard__media { display: block; }
+.jcard h3 a { color: inherit; text-decoration: none; }
+.jcard h3 a:hover { color: var(--color-accent); }
+
+/* ============================================================
+   ARTICLE (journal detail pages)
+   ============================================================ */
+.article { padding-top: calc(var(--header-h) + clamp(1.25rem, 3vw, 2.25rem)); }
+.article__back {
+  display: inline-block; font-size: .8rem; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--color-muted); margin-bottom: clamp(1.5rem, 3vw, 2.25rem);
+}
+.article__back:hover { color: var(--color-accent); }
+.article__head { max-width: 46rem; }
+.article__cat { font-size: .74rem; letter-spacing: .14em; text-transform: uppercase; color: var(--color-accent); margin-bottom: .8rem; }
+.article__title {
+  font-family: var(--font-display); font-weight: 500;
+  font-size: clamp(2rem, 5.2vw, 3.4rem); line-height: 1.12; letter-spacing: -0.015em; text-wrap: balance;
+}
+.article__lead { color: var(--color-muted); font-size: clamp(1.1rem, 1.6vw, 1.3rem); line-height: 1.6; margin-top: 1.25rem; text-wrap: pretty; }
+.article__hero { margin: clamp(2rem, 4vw, 3rem) 0; }
+.article__hero .ph { aspect-ratio: 3 / 2; }
+.article__body { max-width: 40rem; }
+.article__body p { color: var(--color-text); font-size: 1.08rem; line-height: 1.78; margin-bottom: 1.35rem; }
+.article__body h2 { font-family: var(--font-display); font-weight: 500; font-size: clamp(1.5rem, 2.6vw, 2rem); margin: 2.25rem 0 .9rem; }
+.article__body blockquote {
+  font-family: var(--font-display); font-weight: 500; font-size: clamp(1.5rem, 3vw, 2.1rem); line-height: 1.3;
+  color: var(--color-text); margin: 2rem 0; padding-left: 1.25rem; border-left: 2px solid var(--color-accent);
+}
+.article__foot { margin-top: clamp(2.5rem, 5vw, 4rem); padding-top: 1.5rem; border-top: 1px solid var(--color-line); }
+.article__foot p { color: var(--color-muted); font-size: .92rem; margin-bottom: 1rem; }
