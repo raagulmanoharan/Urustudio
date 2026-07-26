@@ -545,29 +545,17 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 1rem); }
 /* ---- OCCASIONS ---- */
 /* Editorial masonry — varied tile heights, not a uniform grid */
 .occasion-grid {
-  columns: 3;
-  column-gap: clamp(1.5rem, 3vw, 2.5rem);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.75rem, 3vw, 3rem) clamp(1.5rem, 3vw, 2.5rem);
 }
-.occasion {
-  break-inside: avoid;
-  margin-bottom: clamp(1.75rem, 3vw, 3rem);
-}
-.occasion .ph { transition: transform var(--transition), box-shadow var(--transition); }
+/* uniform ratio keeps the grid tidy; hover lift is glitch-free in grid
+   (the old multicol layout clipped the transformed tile at column edges) */
+.occasion .ph { aspect-ratio: 4 / 3; transition: transform var(--transition), box-shadow var(--transition); }
 .occasion:hover .ph { transform: translateY(-5px); box-shadow: var(--shadow-md); }
 .occasion h3 { font-family: var(--font-display); font-weight: 500; font-size: 1.35rem; margin: 1rem 0 .4rem; }
 .occasion p { color: var(--color-muted); font-size: .95rem; }
-/* staggered aspect ratios for magazine rhythm (override .ph--wide) */
-.occasion:nth-child(3n+1) .ph { aspect-ratio: 3 / 4; }
-.occasion:nth-child(3n+2) .ph { aspect-ratio: 4 / 3; }
-.occasion:nth-child(3n)   .ph { aspect-ratio: 1 / 1; }
-@media (max-width: 900px) { .occasion-grid { columns: 2; } }
-@media (max-width: 560px) {
-  .occasion-grid { columns: 1; }
-  /* normalize the tall masonry ratios to compact landscape in a single column */
-  .occasion:nth-child(3n+1) .ph,
-  .occasion:nth-child(3n+2) .ph,
-  .occasion:nth-child(3n)   .ph { aspect-ratio: 3 / 2; }
-}
+@media (max-width: 560px) { .occasion .ph { aspect-ratio: 3 / 2; } }
 
 /* ---- STORY (dark) ---- */
 .story__inner { max-width: 60rem; margin-inline: auto; text-align: center; }
