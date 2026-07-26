@@ -720,27 +720,54 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 1rem); }
   padding: .5rem 1rem; background: var(--color-surface);
 }
 
-/* Collection — signature feature */
+/* Most popular — single unified card (image + text share one card) */
 .feature {
-  display: grid; grid-template-columns: 1.5fr 1fr;
-  align-items: center;
-  margin-bottom: clamp(3rem, 6vw, 5rem);
-}
-.feature__media .ph { aspect-ratio: 5 / 4; }
-.feature__text {
+  display: grid; grid-template-columns: 1.05fr 1fr;
+  align-items: stretch;
+  min-height: clamp(420px, 42vw, 520px);
   background: var(--color-surface);
   border: 1px solid var(--color-line);
   border-radius: var(--radius-lg);
-  padding: clamp(1.75rem, 3vw, 2.75rem);
-  margin-left: -12%;
+  overflow: hidden;
   box-shadow: var(--shadow-md);
-  position: relative;
-  z-index: 2;
+}
+.feature__media .ph { height: 100%; aspect-ratio: auto; border-radius: 0; }
+.feature__text {
+  padding: clamp(1.75rem, 3.5vw, 3rem);
+  display: flex; flex-direction: column; justify-content: center;
 }
 .micro { font-size: .74rem; letter-spacing: .14em; text-transform: uppercase; color: var(--color-accent); }
 .feature__name { font-family: var(--font-display); font-weight: 500; font-size: clamp(1.8rem, 3.5vw, 2.6rem); margin: .5rem 0 1rem; }
 .feature__text > p { color: var(--color-muted); }
 .spec { color: var(--color-text) !important; font-size: .85rem; margin-top: 1.25rem !important; padding-top: 1rem; border-top: 1px solid var(--color-line); }
+
+/* Mission — statement set on a dramatic in-context image */
+.mission {
+  position: relative;
+  display: flex; align-items: center;
+  min-height: clamp(24rem, 58vh, 36rem);
+  overflow: hidden;
+}
+.mission__media { position: absolute; inset: 0; background-size: cover; background-position: center; }
+.mission__scrim {
+  position: absolute; inset: 0;
+  background: linear-gradient(90deg, rgba(22,17,13,.80) 0%, rgba(22,17,13,.56) 44%, rgba(22,17,13,.12) 100%);
+}
+.mission__content { position: relative; z-index: 1; }
+.mission__line {
+  font-family: var(--font-display); font-weight: 500; color: #f7f1e8;
+  font-size: clamp(1.9rem, 4.6vw, 3.4rem); line-height: 1.15; letter-spacing: -0.01em;
+  text-wrap: balance; max-width: 18ch;
+}
+.mission__sub {
+  color: rgba(247,241,232,.84);
+  font-size: clamp(1rem, 1.4vw, 1.15rem); line-height: 1.62;
+  margin-top: 1.25rem; max-width: 46ch; text-wrap: pretty;
+}
+@media (max-width: 640px) {
+  .mission { min-height: clamp(22rem, 62vh, 30rem); }
+  .mission__scrim { background: linear-gradient(180deg, rgba(22,17,13,.40) 0%, rgba(22,17,13,.74) 100%); }
+}
 
 /* Collection — filmstrip */
 .filmstrip__hint { font-size: .78rem; letter-spacing: .04em; text-transform: uppercase; color: var(--color-muted); margin-bottom: 1rem; }
@@ -750,6 +777,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 1rem); }
   padding-bottom: 1rem;
   margin-inline: calc(var(--container-pad) * -1);
   padding-inline: var(--container-pad);
+  scroll-padding-inline: var(--container-pad);
   scrollbar-width: thin;
 }
 .film { flex: 0 0 min(74%, 300px); scroll-snap-align: start; }
@@ -809,8 +837,9 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 1rem); }
 /* responsive — modern sections */
 @media (max-width: 900px) {
   .feature, .spread { grid-template-columns: 1fr; }
-  .feature__text { margin-left: 0; }
-  .feature__media .ph { aspect-ratio: 4 / 3; }
+  .feature { min-height: 0; }
+  .feature__text { margin-left: 0; padding: clamp(1.5rem, 6vw, 2rem); }
+  .feature__media .ph { height: auto; aspect-ratio: 4 / 3; }
   .spread__media { order: -1; }
   .journal-grid, .bespoke-grid { grid-template-columns: 1fr 1fr; }
   .pullquote--right { text-align: left; margin-left: 0; }
