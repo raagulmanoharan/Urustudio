@@ -104,7 +104,7 @@
       e.preventDefault();
       const input = signup.querySelector("input");
       if (!input || !input.value.trim()) return;
-      signup.innerHTML = '<p style="padding:.7rem 1rem;color:var(--color-accent);font-size:.9rem;">Thank you — we\'ll be in touch.</p>';
+      signup.innerHTML = '<p style="padding:.7rem 1rem;color:var(--color-accent);font-size:.9rem;">Thank you, we\'ll be in touch.</p>';
     });
   }
 })();
