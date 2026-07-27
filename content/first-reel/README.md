@@ -1,13 +1,13 @@
 # URU — First Story (Awareness Reel)
 
 The first social story for URU: a founder-led Instagram Reel built to create **awareness + curiosity**
-without reading as an ad or as "AI slop." This folder holds the finished reel, the two generated
-stills, the build scripts, and the strategy behind it.
+without reading as an ad or as "AI slop." This folder holds the finished reel, the generated stills, the
+build scripts, and the strategy behind it.
 
-- **Deliverable:** [`uru-reel-v1.mp4`](./uru-reel-v1.mp4) — 20.6s · 9:16 · 1080×1920 · H.264/AAC
+- **Deliverable:** [`uru-reel.mp4`](./uru-reel.mp4) — 20.6s · 9:16 · 1080×1920 · H.264/AAC
 - **Angle:** *"The gift that was meant to be kept"* (heritage → now)
-- **Voice/VO:** founder avatar (HeyGen), founder's own cloned voice
-- **Picture:** strictly the 46-item product catalog + the avatar (no stock, no invented product)
+- **On camera:** founder, avatar (HeyGen) in the founder's own cloned voice, matted into a warm workshop
+- **Picture:** founder avatar + generated brand-style stills + product catalog + a reframed site wedding shot
 
 ---
 
@@ -33,24 +33,25 @@ exactly that, in the founder's voice, and withholds the hard sell so it earns a 
 
 | Time | Picture | Line |
 |------|---------|------|
-| 0.0–3.3 | Founder, to camera | "In Tamil Nadu, we once gave newlyweds…" |
-| 3.3–7.8 | Drawstring Koodai → Thamboolam set | "…woven from river grass… meant to last their whole marriage." |
+| 0.0–3.3 | Founder (workshop backdrop) | "In Tamil Nadu, we once gave newlyweds…" |
+| 3.3–5.6 | Soaked *korai* grass → keepsake with a name tag | "…woven from river grass — with their names on it." |
+| 5.6–7.8 | Reframed site wedding shot (basket carried) | "Meant to last their whole marriage." |
 | 7.8–13.1 | Founder (the pivot + mission) | "Now? …plastic in the bin by Monday. So I started Uru." |
-| 13.1–18.1 | Flap Bag → sweets → jasmine → Marigold Tote | "Still woven by hand. Filled for your day, and made to be kept…" |
-| 18.1–20.6 | Drawstring hero + `uru` wordmark | "A gift from your day should outlast it." |
+| 13.1–15.1 | Hands weaving *korai* | "Still woven by hand." |
+| 15.1–16.8 | Sweets box → jasmine gajra (catalog) | "Filled for your day…" |
+| 16.8–18.1 | Drawstring Koodai, filled (catalog) | "…and made to be kept, long after." |
+| 18.1–20.6 | Basket living at home + `uru` wordmark | "A gift from your day should outlast it." |
 
 ## Research synthesis (what the reel is built on)
 
 Four parallel research streams (Indian craft D2C · global slow-craft & quiet-luxury · short-form hook
 mechanics · unknown-brand launch playbook) converged on the same rules:
 
-1. **Open mid-action / on a person — never a logo or title card.** The first ~1.7s decide reach.
+1. **Open on a person / mid-action — never a logo or title card.** The first ~1.7s decide reach.
 2. **The VO carries it; no music bed.** A generic track "that could sell anything" is a top ad/slop tell.
-   Here the founder's voice is the audio.
 3. **Withhold the pitch.** No price, no "shop now." Awareness earns the *follow* by being satisfying and
-   slightly unfinished. Reveal the object; withhold the who/where/why (that gap is the reason to follow).
-4. **Native texture over polish.** Handheld feel, natural light, one consistent grade. Over-graded,
-   studio-perfect B-roll reads as ad or AI.
+   slightly unfinished. Reveal the object; withhold the who/where/why.
+4. **Native texture over polish.** Handheld feel, natural light, one consistent warm grade.
 5. **Burn captions** (brand font) for muted autoplay; keep to a few short lines.
 6. **~20–30s, 9:16, built to loop.**
 
@@ -72,31 +73,36 @@ mat gifted to Queen Elizabeth II at her 1953 coronation) plus hard data on retur
 > #uru #korai #pattamadai #handwoven #tamilwedding #returngifts #southindianwedding #weddingfavors
 > #slowcraft #keepsake #madeinindia #sustainablegifting
 
-## Known caveat
+## Generated stills (URU style, Gemini / Nano Banana 2)
 
-HeyGen did **not** apply the intended warm workshop backdrop to this instant-avatar look — the founder's
-real room shows behind him (a faint ceiling fan up top). It's tightened and warm-graded so it reads as an
-authentic founder selfie. A re-render with a matting-capable avatar type is the fix if the literal backdrop
-is wanted.
+Made in the site/catalogue style to fill story gaps the catalog doesn't cover. Reusable assets:
 
-## Stills (bonus, not used in the catalog-only v1)
-
-Generated in URU's style (Gemini / Nano Banana 2) to fill story gaps the catalog doesn't cover. Kept here
-as reusable assets:
-
-- [`stills/soaked-korai-grass.png`](./stills/soaked-korai-grass.png) — material/process (the weaving hook)
+- [`stills/soaked-korai-grass.png`](./stills/soaked-korai-grass.png) — river grass (the material)
+- [`stills/keepsake-name-tag.png`](./stills/keepsake-name-tag.png) — the name-inscribed keepsake
+- [`stills/weaving-hands.png`](./stills/weaving-hands.png) — hands weaving *korai*
 - [`stills/basket-second-life.png`](./stills/basket-second-life.png) — the emptied basket living at home
+
+## Production notes
+
+- **Avatar backdrop:** HeyGen couldn't matte this instant-avatar look (its `remove_background` returned a
+  fully opaque frame), so the founder is segmented locally (`rembg`, `u2net_human_seg`) and composited over
+  a blurred, warm workshop backdrop derived from the site's own weaving photo, with edge feathering and mild
+  temporal smoothing to reduce flicker.
+- **Sound:** VO only, no music (anti-"AI-slop" per the research).
+- **Captions:** burned in the site's Archivo brand font for muted autoplay.
+- Build intermediates (raw avatar render, extracted catalog, QC frames) live under `/scratch/` and are
+  git-ignored.
 
 ## Rebuild
 
 ```bash
-pip install pillow numpy imageio imageio-ffmpeg fonttools brotli
-# 1) (optional) regenerate stills — needs a Gemini image key
+pip install pillow numpy imageio imageio-ffmpeg fonttools brotli rembg onnxruntime pooch
+# 1) generate the brand-style stills (needs a Gemini image key)
 GEMINI_API_KEY=... python build/gen_image.py --prompt "..." --output out.png --aspect-ratio 9:16 --ref <site image>
-# 2) avatar VO clip is rendered via the HeyGen CLI (heygen video create) into scratch/gen/avatar.mp4
-# 3) compose the reel (expects catalog imgs in scratch/cs, avatar in scratch/gen)
-python build/render.py     # -> scratch/out/silent.mp4, then mux HeyGen audio
+# 2) render the founder VO clip via the HeyGen CLI -> scratch/gen/avatar.mp4
+#    heygen video create -d '{"type":"avatar","avatar_id":"...","voice_id":"...","script":"...","aspect_ratio":"9:16"}' --wait
+# 3) matte the founder onto the workshop backdrop -> scratch/gen/avatar_workshop.mp4
+python build/matte_avatar.py
+# 4) compose the reel (expects catalog imgs in scratch/cs, stills in scratch/gen) then mux the VO
+python build/render.py
 ```
-
-Build intermediates (raw avatar render, extracted catalog, QC frames) live under `/scratch/` and are
-git-ignored.
