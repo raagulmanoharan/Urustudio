@@ -710,7 +710,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 1rem); }
   min-height: clamp(24rem, 58vh, 36rem);
   overflow: hidden;
 }
-.mission__media { position: absolute; inset: 0; background-size: cover; background-position: center; }
+.mission__media { position: absolute; inset: 0; background-image: url('../images/mission-band.jpg'); background-size: cover; background-position: center; }
 .mission__scrim {
   position: absolute; inset: 0;
   background:
@@ -735,6 +735,9 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 1rem); }
   .mission__scrim {
     background: linear-gradient(180deg, rgba(16,12,9,.72) 0%, rgba(16,12,9,.55) 45%, rgba(16,12,9,.80) 100%);
   }
+  /* portrait-framed images for narrow screens (the wide desktop shots crop poorly on phones) */
+  .hero__media { background-image: url('../images/Uru_Hero_mobile.jpg'); }
+  .mission__media { background-image: url('../images/mission-mobile.jpg'); }
 }
 
 /* Collection — filmstrip */
