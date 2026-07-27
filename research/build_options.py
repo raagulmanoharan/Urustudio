@@ -25,7 +25,9 @@ SECTIONS = [
    (f"{OPT}/bag-clutch.png","Reed Clutch","Fine korai · zip close","~20 × 12 cm"),
    (f"{OPT}/bag-flap.png","Flap Bag","Natural korai · wooden button","~17 × 12 cm"),
  ]),
- ("Brass keepsakes","Small gift-scale brass, engravable. Made to order.",[
+ ("Brass keepsakes","Small gift-scale brass, engravable, that gets kept and used. Made to order.",[
+   (f"{OPT}/br-catchall.png","Catchall Dish","Keys &amp; rings tray","~10 cm"),
+   (f"{OPT}/br-incense.png","Incense Holder","Agarbatti stand · ash tray","~12 cm"),
    (f"{OPT}/br-diya.png","Brass Diya","Kuthuvilakku · engravable base","~6 cm"),
    (f"{OPT}/br-kumkum.png","Kumkum Box","Kumkum chimizh · lidded","~4 cm"),
    (f"{OPT}/br-bell.png","Pooja Bell","Manikatti · hand bell","~6 cm"),
@@ -41,7 +43,9 @@ SECTIONS = [
    (f"{OPT}/kb-dryfruit.png","Dry Fruit &amp; Nuts","Almond · cashew · date","~60–80 g"),
    (f"{OPT}/kb-murukku.png","Murukku &amp; Mixture","Savoury","~50 g"),
  ]),
- ("Other","Natural extras. Plastic-free where possible.",[
+ ("Other","Useful keepsakes and natural extras — the pieces that get kept and used. Plastic-free where possible.",[
+   (f"{OPT}/ot-coasters.png","Coaster Set","Woven korai · set of four","~9 cm"),
+   (f"{OPT}/ot-napkin.png","Cotton Napkin","Handloom · napkin or wrap","folds to ~10 cm"),
    (f"{OPT}/ot-soap.png","Handmade Soap","Sandalwood / jasmine","~60 g bar"),
    (f"{OPT}/ot-seedpaper.png","Seed Paper","Plantable tag","flat"),
    (f"{OPT}/ot-agarbatti.png","Agarbatti","Incense sticks","short bundle"),
