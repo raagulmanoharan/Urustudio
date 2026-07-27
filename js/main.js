@@ -85,7 +85,6 @@
       const date = val("ef-date");
       const city = val("ef-city");
       const qty = val("ef-qty");
-      const budget = val("ef-budget");
       const msg = val("ef-msg");
       const lines = [
         "Hi Uru, I'd like to enquire about return gifts.",
@@ -93,7 +92,6 @@
         date && `Event date: ${date}`,
         city && `Delivery city: ${city}`,
         qty && `Quantity: ${qty}`,
-        budget && `Budget per gift: ${budget}`,
         msg && `Details: ${msg}`,
       ].filter(Boolean);
       const url =
