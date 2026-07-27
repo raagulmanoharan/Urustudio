@@ -9,31 +9,32 @@ REPO = "/home/user/Urustudio"
 LB   = "/tmp/claude-0/-home-user-Urustudio/814f9f28-ad79-514d-83be-0430254fdf3b/scratchpad/lookbook"
 SCR  = "/tmp/claude-0/-home-user-Urustudio/814f9f28-ad79-514d-83be-0430254fdf3b/scratchpad"
 
+OPT = f"{SCR}/options"
 SRC = {
     "cover":   f"{LB}/01-cover.png",
     "spreadA": f"{LB}/02-spreadA.png",
     "spreadB": f"{LB}/03-spreadB.png",
-    "koodai":  f"{LB}/04-koodai.png",
-    "tote":    f"{LB}/05-tote.png",
-    "bucket":  f"{LB}/06-bucket.png",
+    "koodai":  f"{OPT}/bag-koodai.png",
+    "tote":    f"{OPT}/bag-thamboolam.png",
+    "bucket":  f"{OPT}/bag-bucket.png",
     "tassels": f"{LB}/07-tassels.png",
     "linings": f"{LB}/08-linings.png",
     "menu":    f"{LB}/09-content-menu.png",
-    "soap":    f"{LB}/10-soap.png",
-    "sweets":  f"{LB}/11-sweets.png",
+    "soap":    f"{OPT}/ot-soap.png",
+    "sweets":  f"{OPT}/kb-mysorepak.png",
     "kept":    f"{LB}/12-kept.png",
     "brass":   f"{SCR}/ref-brass-keepsake.png",
-    "token":   f"{SCR}/ref-brass-token.png",
+    "token":   f"{OPT}/br-diya.png",
     "box":     f"{SCR}/ref-kraft-box.png",
     "hangtag": f"{SCR}/ref-hangtag-card.png",
-    "seedtag": f"{SCR}/ref-seedpaper-tag.png",
-    # real renders already used on the website
-    "b_potli": f"{REPO}/images/p-thamboolam-potli.jpg",
-    "b_bag":   f"{REPO}/images/p-thamboolam-bag.jpg",
-    "b_mari":  f"{REPO}/images/p-marigold.jpg",
-    "b_buck":  f"{REPO}/images/p-bucket.jpg",
-    "b_clut":  f"{REPO}/images/p-clutch.jpg",
-    "b_flap":  f"{REPO}/images/p-flap.jpg",
+    "seedtag": f"{OPT}/ot-seedpaper.png",
+    # bags re-rendered as actual return-gift bags (not baskets)
+    "b_potli": f"{OPT}/bag-koodai.png",
+    "b_bag":   f"{OPT}/bag-thamboolam.png",
+    "b_mari":  f"{OPT}/bag-marigold.png",
+    "b_buck":  f"{OPT}/bag-bucket.png",
+    "b_clut":  f"{OPT}/bag-clutch.png",
+    "b_flap":  f"{OPT}/bag-flap.png",
     "makers":  f"{REPO}/images/makers.jpg",
     "weave":   f"{REPO}/images/process-weave.jpg",
 }
@@ -92,7 +93,7 @@ PAGES = f"""
   <div class="split__body">
     <p class="eyebrow">Uru means to make — to give something form</p>
     <p class="lead">Months of planning, and the day itself is over in hours. What we make is the part that stays: a handwoven keepsake, small enough to keep and good enough to use, that sends everyone home with a little of your happiest day.</p>
-    <p class="note">Every set is made to order. No plastic in the gift. Each piece leaves a loom with a name behind it — women-led weaving clusters across Tamil Nadu.</p>
+    <p class="note">Every set is made to order. No plastic in the gift. Each piece leaves a loom with a name behind it — weaving clusters across Tamil Nadu.</p>
   </div>
 </section>
 
@@ -207,7 +208,7 @@ PAGES = f"""
   <div class="split__img" style="background-image:url('{IMG['weave']}')"></div>
   <div class="split__body">
     <p class="eyebrow">Signed by hand</p>
-    <h2>Made by women-led clusters in Tamil Nadu</h2>
+    <h2>Made by weaving clusters in Tamil Nadu</h2>
     <p class="note">Chettinad palm-leaf (kottan), Pattamadai and Musiri korai grass, Thoothukudi palmyra — many GI-tagged crafts. Order a batch and you keep a craft in practice for another season.</p>
   </div>
 </section>
