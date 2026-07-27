@@ -7,6 +7,7 @@ from PIL import Image
 
 OPT = "/tmp/claude-0/-home-user-Urustudio/814f9f28-ad79-514d-83be-0430254fdf3b/scratchpad/options"
 SCR = "/tmp/claude-0/-home-user-Urustudio/814f9f28-ad79-514d-83be-0430254fdf3b/scratchpad"
+REPO = "/home/user/Urustudio"  # website's own product photos
 
 def uri(path, maxw=680, q=80):
     im = Image.open(path).convert("RGB")
@@ -17,13 +18,13 @@ def uri(path, maxw=680, q=80):
 
 # section: (title, note, [ (imgpath, name, descriptor, size) ... ])
 SECTIONS = [
- ("Bags","Six woven styles, made to order in the website colours. Interior sizes indicative.",[
-   (f"{OPT}/bag-koodai.png","Drawstring Koodai","Rust &amp; beige korai · cinch top","~15 × 15 cm"),
-   (f"{OPT}/bag-thamboolam.png","Thamboolam Bag","Terracotta &amp; ivory · open tote","~18 × 14 cm"),
-   (f"{OPT}/bag-marigold.png","Marigold Tote","Korai · rust band · open","~16 × 16 cm"),
-   (f"{OPT}/bag-bucket.png","Bucket Bag","Sage &amp; natural · folded cuff","~14 × 12 cm"),
-   (f"{OPT}/bag-clutch.png","Reed Clutch","Fine korai · zip close","~20 × 12 cm"),
-   (f"{OPT}/bag-flap.png","Flap Bag","Natural korai · wooden button","~17 × 12 cm"),
+ ("Bags","The website collection, shown in its own product photos. Interior sizes indicative.",[
+   (f"{REPO}/images/p-thamboolam-potli.jpg","Drawstring Koodai","Rust &amp; beige korai · cinch top","~15 × 15 cm"),
+   (f"{REPO}/images/p-thamboolam-bag.jpg","Thamboolam Bag","Terracotta &amp; ivory · open tote","~18 × 14 cm"),
+   (f"{REPO}/images/p-marigold.jpg","Marigold Tote","Korai · rust band · open","~16 × 16 cm"),
+   (f"{REPO}/images/p-bucket.jpg","Bucket Bag","Sage &amp; natural · folded cuff","~14 × 12 cm"),
+   (f"{REPO}/images/p-clutch.jpg","Reed Clutch","Fine korai · zip close","~20 × 12 cm"),
+   (f"{REPO}/images/p-flap.jpg","Flap Bag","Natural korai · wooden button","~17 × 12 cm"),
  ]),
  ("Brass keepsakes","Small gift-scale brass, engravable, that gets kept and used. Made to order.",[
    (f"{OPT}/br-catchall.png","Catchall Dish","Keys &amp; rings tray","~10 cm"),
@@ -33,7 +34,7 @@ SECTIONS = [
    (f"{OPT}/br-bell.png","Pooja Bell","Manikatti · hand bell","~6 cm"),
    (f"{OPT}/br-urli.png","Brass Urli","Shallow bowl","~7 cm"),
    (f"{OPT}/br-supari.png","Supari Box","Betel-nut box · lidded","~5 cm"),
-   (f"{SCR}/ref-brass-token.png","Engraved Token","Name &amp; date tag","~3–4 cm"),
+   (f"{OPT}/br-token.png","Engraved Token","Name &amp; date tag","~3–4 cm"),
  ]),
  ("Kraft-box contents","Edible &amp; pooja items for the kraft box. Fresh items are made near the date.",[
    (f"{OPT}/kb-mysorepak.png","Mysore Pak","Ghee sweet","2–3 pcs"),
