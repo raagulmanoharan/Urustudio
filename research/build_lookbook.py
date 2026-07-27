@@ -20,14 +20,14 @@ SRC = {
     "tassels": f"{LB}/07-tassels.png",
     "linings": f"{LB}/08-linings.png",
     "menu":    f"{LB}/09-content-menu.png",
-    "soap":    f"{OPT}/ot-soap.png",
-    "sweets":  f"{OPT}/kb-mysorepak.png",
+    "soap":    f"{OPT}/ot2-soap.png",
+    "sweets":  f"{OPT}/kw-sweets.png",
     "kept":    f"{LB}/12-kept.png",
-    "brass":   f"{SCR}/ref-brass-keepsake.png",
-    "token":   f"{OPT}/br-diya.png",
+    "brass":   f"{OPT}/br2-kumkum.png",
+    "token":   f"{OPT}/br2-diya.png",
     "box":     f"{SCR}/ref-kraft-box.png",
-    "hangtag": f"{SCR}/ref-hangtag-card.png",
-    "seedtag": f"{OPT}/ot-seedpaper.png",
+    "hangtag": f"{OPT}/ot2-tag.png",
+    "seedtag": f"{OPT}/ot2-seedcard.png",
     # bags use the website's own product photos
     "b_potli": f"{REPO}/images/p-thamboolam-potli.jpg",
     "b_bag":   f"{REPO}/images/p-thamboolam-bag.jpg",
@@ -182,7 +182,7 @@ PAGES = f"""
     <p class="note">The couple's name and date, pressed by hand. Choose paper, wood or brass.</p></div>
   <div class="trio">
     <figure><div class="trioimg" style="background-image:url('{IMG['hangtag']}')"></div><figcaption>Hang &amp; care cards · cotton paper</figcaption></figure>
-    <figure><div class="trioimg" style="background-image:url('{IMG['token']}')"></div><figcaption>Engraved brass token</figcaption></figure>
+    <figure><div class="trioimg" style="background-image:url('{IMG['token']}')"></div><figcaption>Brass diya keepsake</figcaption></figure>
     <figure><div class="trioimg" style="background-image:url('{IMG['seedtag']}')"></div><figcaption>Plantable seed-paper tag</figcaption></figure>
   </div>
 </section>
