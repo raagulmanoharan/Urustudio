@@ -1,0 +1,5 @@
+# Claude build scratch (transient: raw avatar render, signed-URL outputs, extracted catalog, QC frames)
+/scratch/
+__pycache__/
+*.pyc
+*.wav
