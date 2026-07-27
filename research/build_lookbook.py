@@ -66,12 +66,12 @@ def fill(name, note):
     return f"<li><b>{name}</b><span>{note}</span></li>"
 
 FILLS = "".join([
-    fill("Handmade soap","Cold-process, botanical. Plastic-free wrap. MOQ ~50 · Coimbatore."),
+    fill("Sweets","Mysore pak, laddu &amp; more — fresh milk/ghee sweets, made near the date. No MOQ · Chennai."),
+    fill("Seeds &amp; seed paper","A favour that can be planted — loose seeds or plantable seed-paper. Low MOQ."),
+    fill("Handmade soap","Sandalwood, jasmine or turmeric; cold-process. Plastic-free wrap. MOQ ~50 · Coimbatore."),
     fill("Dried fruit &amp; nuts","Long shelf-life; ships and stores ahead. From ~25 packs · Chennai."),
     fill("Brass diya / kumkum box","Gift-scale brass keepsake, engravable. Made to order · Nachiarkoil / Chennai."),
-    fill("Natural incense","Custom scent, branded band. Sivakasi hub."),
-    fill("Plantable seed paper","The favour itself can be planted — on-brand, no waste."),
-    fill("Sweets","Fresh milk/ghee sweets; short shelf-life, made near the date. No MOQ · Chennai."),
+    fill("Sambrani &amp; agarbatti","Natural incense, custom scent &amp; a branded band. Sivakasi hub."),
 ])
 
 PAGES = f"""
@@ -129,7 +129,7 @@ PAGES = f"""
     <p class="eyebrow">In detail · Drawstring Koodai</p>
     <h2>Holds its shape, cinches shut</h2>
     <p class="note"><b>Physics &amp; make.</b> A drawstring channel is woven into the rim; korai grass is stiff enough to hold a rounded body when filled (~250–400 g). The cotton cord and tassel are added at finishing, dyed to your accent shade.</p>
-    <div class="chips"><span>korai grass</span><span>~15×15 cm</span><span>cotton drawcord</span><span>dusty-rose tassel</span></div>
+    <div class="chips"><span>korai grass</span><span>~15×15 cm</span><span>ivory band</span><span>dusty-rose tassel</span><span>cotton drawcord</span></div>
   </div>
 </section>
 
@@ -138,7 +138,7 @@ PAGES = f"""
   <div class="page-head"><p class="eyebrow">In detail · Open styles</p><h2>Thamboolam tote &amp; bucket bag</h2></div>
   <div class="duo">
     <figure><div class="duoimg" style="background-image:url('{IMG['tote']}')"></div>
-      <figcaption><h4>Thamboolam Tote</h4><p>Flat plaited base for stability; open mouth suits bulkier contents — betel, sweets, a small pouch. No closure needed.</p></figcaption></figure>
+      <figcaption><h4>Thamboolam Tote</h4><p>Flat plaited base for stability; open mouth holds thamboolam — betel leaf, areca nut, turmeric, a folded blouse piece. No closure needed.</p></figcaption></figure>
     <figure><div class="duoimg" style="background-image:url('{IMG['bucket']}')"></div>
       <figcaption><h4>Bucket Bag</h4><p>A folded cuff doubles the rim for structure; two short woven handles. Sage &amp; natural straw.</p></figcaption></figure>
   </div>
@@ -150,7 +150,7 @@ PAGES = f"""
   <div class="split__body">
     <p class="eyebrow">Fill it your way</p>
     <h2>Content options</h2>
-    <p class="note">Each keepsake is gifted filled. Mix to the occasion; we keep it plastic-free.</p>
+    <p class="note">Each keepsake is gifted filled. At heart — sweets, seeds and soap — mixed to the occasion, always plastic-free.</p>
     <ul class="fillmenu">{FILLS}</ul>
   </div>
 </section>
@@ -159,7 +159,7 @@ PAGES = f"""
 <section class="page grid-page">
   <div class="page-head"><p class="eyebrow">Content, up close</p><h2>Chosen to the occasion</h2></div>
   <div class="trio">
-    <figure><div class="trioimg" style="background-image:url('{IMG['soap']}')"></div><figcaption>Botanical soap · dusty rose</figcaption></figure>
+    <figure><div class="trioimg" style="background-image:url('{IMG['soap']}')"></div><figcaption>Sandalwood &amp; jasmine soap</figcaption></figure>
     <figure><div class="trioimg" style="background-image:url('{IMG['sweets']}')"></div><figcaption>Sweets &amp; dry fruit · kraft box</figcaption></figure>
     <figure><div class="trioimg" style="background-image:url('{IMG['brass']}')"></div><figcaption>Brass diya &amp; kumkum box</figcaption></figure>
   </div>
