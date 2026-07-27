@@ -29,7 +29,7 @@
   .wrap{max-width:1180px;margin:0 auto;padding:0 1.25rem}
   header.top{padding:2.5rem 0 1.25rem;border-bottom:1px solid var(--line);margin-bottom:1.5rem}
   h1{font-size:clamp(1.6rem,3.5vw,2.4rem);margin:0 0 .35rem;letter-spacing:.01em}
-  .sub{color:var(--muted);max-width:70ch;font-size:.98rem}
+  .sub{color:var(--muted);max-width:72ch;font-size:.98rem}
   .legend{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem}
   .legend span{font-size:.78rem;background:var(--chip);border:1px solid var(--line);
     padding:.25rem .6rem;border-radius:999px;color:var(--muted)}
@@ -41,13 +41,14 @@
     border-bottom:2px solid var(--accent-soft);padding-bottom:.4rem;margin-bottom:1rem}
   .sec-head h2{font-size:1.2rem;margin:0}
   .sec-head .n{font-size:.8rem;font-weight:700;color:var(--panel);background:var(--accent);
-    width:1.6rem;height:1.6rem;display:grid;place-items:center;border-radius:50%}
+    min-width:1.6rem;height:1.6rem;padding:0 .4rem;display:grid;place-items:center;border-radius:999px}
   .sec-head .hub{color:var(--muted);font-size:.85rem}
 
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1rem}
   .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;
     padding:1rem 1.05rem;display:flex;flex-direction:column;gap:.5rem}
   .card.star{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent) inset}
+  .card.note{background:transparent;border-style:dashed}
   .card h3{margin:0;font-size:1rem;display:flex;align-items:center;gap:.4rem}
   .card h3 .s{color:var(--star)}
   .loc{color:var(--muted);font-size:.82rem;margin:-.2rem 0 .2rem}
@@ -69,127 +70,86 @@
 <div class="wrap">
   <header class="top">
     <h1>Uru Studio — Sourcing Contact Sheet</h1>
-    <p class="sub">Manufacturers &amp; makers in <b>Tamil Nadu</b> for every component of the return-gift set, with indicative per-unit costs, MOQs and contacts. Batch sizes 50–2,000. Compiled 27 Jul 2026.</p>
+    <p class="sub">Makers in <b>Tamil Nadu</b> for every component of the return-gift set. The woven bag is sourced as <b>one finished piece</b> (lined, banded, tasselled, closed, labelled) — so the set is just six supply lines. Indicative ₹/MOQ/contacts, batch sizes 50–2,000. Compiled 27 Jul 2026.</p>
     <div class="legend">
       <span>⭐ = strongest first-contact lead</span>
       <span>₹ prices are indicative — re-quote against spec</span>
-      <span>⚑ = number is a portal/virtual line, verify</span>
+      <span>⚑ = portal/virtual number, verify</span>
     </div>
-    <div class="callout"><b>No supplier has been contacted.</b> Numbers like <code>+91 8047…</code> route through IndiaMART/TradeIndia (not direct lines). Everything unverified is flagged. Outreach drafts are in <code>tamil-nadu-sourcing.md</code>.</div>
+    <div class="callout"><b>Enquiry drafts ready in Gmail (not sent).</b> 10 emails, signed by Raagul, each asking for MOQ · price · catalogue · lead time, with reference images to attach. Numbers like <code>+91 8047…</code> route through IndiaMART/TradeIndia — confirm direct lines. Full notes &amp; sources in <code>tamil-nadu-sourcing.md</code>.</div>
   </header>
 
-  <!-- 1 BAGS -->
+  <!-- 1 FINISHED BAG -->
   <section>
-    <div class="sec-head"><span class="n">1</span><h2>Woven keepsakes — "the bags"</h2><span class="hub">Chettinad · Pattamadai · Thoothukudi · korai / palm / banana fibre</span></div>
+    <div class="sec-head"><span class="n">1</span><h2>The finished woven bag</h2><span class="hub">delivered lined + banded + tasselled + closed + labelled · Chettinad / Pattamadai / Thoothukudi</span></div>
     <div class="grid">
-      <div class="card star"><h3><span class="s">⭐</span>M.Rm.Rm. Cultural Foundation (Manjal)</h3><p class="loc">R.A. Puram, Chennai + Sivaganga clusters</p><p class="makes">Chettinad kottan palm/palmyra baskets, bags, boxes · 100+ women artisans · GI craft. Explicit custom + bulk.</p><div class="rows"><div><b>Price</b><span>quote</span></div><div><b>MOQ</b><span>negotiable</span></div></div><div class="contact">☎ +91 44 24622505 / 063746 27663 · chettinadculture@gmail.com · mrmrmculturalfoundation.com</div></div>
-      <div class="card"><h3>Pachaa Traders ("Panai")</h3><p class="loc">Karaikudi, Sivaganga</p><p class="makes">Palm-leaf kottan/koodai baskets, purses, trays, gift boxes · women artisans.</p><div class="rows"><div><b>Price</b><span>quote</span></div><div><b>MOQ</b><span>unknown</span></div></div><div class="contact">☎ 95660 66255 · pachaa.in</div></div>
+      <div class="card star"><h3><span class="s">⭐</span>M.Rm.Rm. Cultural Foundation (Manjal)</h3><p class="loc">R.A. Puram, Chennai + Sivaganga clusters</p><p class="makes">Chettinad kottan palm/palmyra baskets, bags, boxes · 100+ women artisans · GI craft. Established custom + bulk — confirm they finish in-house.</p><div class="rows"><div><b>Price</b><span>quote</span></div><div><b>MOQ</b><span>negotiable</span></div></div><div class="contact">☎ +91 44 24622505 / 063746 27663 · chettinadculture@gmail.com · 📧 draft ready</div></div>
+      <div class="card"><h3>Pachaa Traders ("Panai")</h3><p class="loc">Karaikudi, Sivaganga</p><p class="makes">Palm-leaf kottan/koodai baskets, purses, gift boxes · women artisans.</p><div class="rows"><div><b>Price</b><span>quote</span></div><div><b>MOQ</b><span>unknown</span></div></div><div class="contact">☎ 95660 66255 · pachaa.in</div></div>
+      <div class="card"><h3>Wire Kadai / Koodai Kadaii</h3><p class="loc">Chennai · TN + Karnataka</p><p class="makes">Custom koodai totes with locks, zippers &amp; linings already integrated — good fit for a finished bag. Confirm natural fibre vs wire.</p><div class="rows"><div><b>Price</b><span>quote</span></div><div><b>MOQ</b><span>unknown</span></div></div><div class="contact">wirekadai.com · via thenodmag feature</div></div>
       <div class="card"><h3>Rangholy</h3><p class="loc">Tirunelveli (Pattamadai)</p><p class="makes">Korai grass baskets, washable, colours.</p><div class="rows"><div><b>Price</b><span>~₹525/pc</span></div><div><b>MOQ</b><span>unknown</span></div></div><div class="contact">☎ 09092333225 <span class="flag">⚑ verify</span></div></div>
-      <div class="card"><h3>Kasiraj Exports</h3><p class="loc">Tuticorin, Thoothukudi</p><p class="makes">Palm-leaf basketry (est. 1997) · colours/shapes/sizes.</p><div class="rows"><div><b>Price</b><span>get latest</span></div><div><b>MOQ</b><span>bulk</span></div></div><div class="contact">S. Balamurugan · #37 Santhai Rd 628002 · phone via TradeIndia <span class="flag">⚑</span></div></div>
-      <div class="card"><h3>Kamalam Exporters</h3><p class="loc">Muttayyapuram, Thoothukudi</p><p class="makes">Palm-leaf baskets/boxes, bulk-capable.</p><div class="rows"><div><b>Price</b><span>unknown</span></div><div><b>MOQ</b><span>bulk</span></div></div><div class="contact">☎ +91-9953717914 / 9700318318 <span class="flag">⚑ verify</span></div></div>
-      <div class="card"><h3>Anakaputhur Jute Weavers Assn.</h3><p class="loc">Anakaputhur, Chennai</p><p class="makes">Banana-fibre &amp; natural-fibre bags · fibre R&amp;D, custom weaves.</p><div class="rows"><div><b>Price</b><span>unknown</span></div><div><b>MOQ</b><span>unknown</span></div></div><div class="contact">Re-open IndiaMART listing for phone <span class="flag">⚑ 429</span></div></div>
-      <div class="card"><h3>Koodai Kadaii / Wire Kadai</h3><p class="loc">TN + Karnataka / Chennai</p><p class="makes">Custom koodai totes, motifs, locks/linings/branding. Confirm natural fibre vs wire.</p><div class="rows"><div><b>Price</b><span>quote</span></div><div><b>MOQ</b><span>unknown</span></div></div><div class="contact">wirekadai.com · via thenodmag feature</div></div>
-      <div class="card"><h3>Poompuhar / TNHDC <span class="flag">route</span></h3><p class="loc">Anna Salai, Chennai (statewide)</p><p class="makes">Govt Common Facility Centres for palm-leaf &amp; kora grass — routes to vetted clusters.</p><div class="rows"><div><b>Price</b><span>catalogue</span></div><div><b>MOQ</b><span>B2B</span></div></div><div class="contact">☎ +91 6369229354 · info@poompuhar.com · poompuhar.com/tnhdc</div></div>
+      <div class="card"><h3>Kasiraj / Kamalam Exporters</h3><p class="loc">Thoothukudi (Tuticorin)</p><p class="makes">Palm-leaf basketry, bulk-capable exporters · colours/shapes/sizes.</p><div class="rows"><div><b>Price</b><span>get latest</span></div><div><b>MOQ</b><span>bulk</span></div></div><div class="contact">Kasiraj: S. Balamurugan · Kamalam: +91-9953717914 <span class="flag">⚑</span></div></div>
+      <div class="card"><h3>Anakaputhur Jute Weavers Assn.</h3><p class="loc">Anakaputhur, Chennai</p><p class="makes">Banana-fibre &amp; natural-fibre bags · fibre R&amp;D, custom weaves.</p><div class="rows"><div><b>Price</b><span>unknown</span></div><div><b>MOQ</b><span>unknown</span></div></div><div class="contact">re-open IndiaMART listing <span class="flag">⚑ 429</span></div></div>
+      <div class="card"><h3>Poompuhar / TNHDC <span class="flag">route</span></h3><p class="loc">Anna Salai, Chennai (statewide)</p><p class="makes">Govt B2B route to vetted palm-leaf &amp; kora-grass clusters.</p><div class="rows"><div><b>Price</b><span>catalogue</span></div><div><b>MOQ</b><span>B2B</span></div></div><div class="contact">☎ +91 6369229354 · info@poompuhar.com · 📧 draft ready</div></div>
+      <div class="card note"><h3>1a · Integration sub-suppliers</h3><p class="makes"><b>Only if a weaver can't finish in-house.</b> Lining/band: SSS Sourcings (Tiruppur), Erode mills, Co-optex, Sowcarpet bands. Tassels/cords: Onesos Trim (Tiruppur ₹5), Komarapalayam cord makers. Closures: Zipper Company / Zip Industries (Chennai antique-brass), Lalumal Sons, Industrial Connections, Metalware (Noida).</p></div>
     </div>
   </section>
 
-  <!-- 2 FABRIC -->
+  <!-- 2 PERSONALISATION -->
   <section>
-    <div class="sec-head"><span class="n">2</span><h2>Fabric — potli, linings &amp; bands</h2><span class="hub">Tiruppur · Erode · Sowcarpet</span></div>
+    <div class="sec-head"><span class="n">2</span><h2>Personalised engraved tag (wood or brass)</h2><span class="hub">Chennai · name + date</span></div>
     <div class="grid">
-      <div class="card star"><h3><span class="s">⭐</span>SSS Sourcings</h3><p class="loc">Tiruppur</p><p class="makes">Cotton drawstring bags, embroidered potli, canvas pouches.</p><div class="rows"><div><b>Price</b><span>₹24–29/pc</span></div><div><b>MOQ</b><span>100 pcs</span></div><div><b>Lead</b><span>~10 days</span></div></div><div class="contact">☎ 08048264913 <span class="flag">⚑</span> · sssecobags.com</div></div>
-      <div class="card"><h3>Sri Shakthi Tex</h3><p class="loc">Erode</p><p class="makes">Plain cotton grey/gada/white, twill/drill for linings &amp; bands · dyes to spec.</p><div class="rows"><div><b>Price</b><span>₹23–55/m</span></div><div><b>MOQ</b><span>300–1000 m</span></div></div><div class="contact">☎ 07942547097 <span class="flag">⚑</span> · srishakthitex.in</div></div>
-      <div class="card"><h3>Sree Kandasamy Mills</h3><p class="loc">Erode</p><p class="makes">White bleached, cotton satin, dyed cotton for linings.</p><div class="rows"><div><b>Price</b><span>₹40–86/m</span></div><div><b>MOQ</b><span>300 m</span></div></div><div class="contact">☎ 07942556291 <span class="flag">⚑</span> · sreekandasamymills.com</div></div>
-      <div class="card"><h3>Co-optex (TN Handloom)</h3><p class="loc">Egmore, Chennai (HQ)</p><p class="makes">Genuine TN handloom cotton &amp; silk fabric for premium linings/bands.</p><div class="rows"><div><b>Price</b><span>quote</span></div><div><b>MOQ</b><span>ask B2B</span></div></div><div class="contact">☎ 044-28193371 · 1800-599-7633 · care@cooptex.com</div></div>
-      <div class="card"><h3>Karur drawstring cluster</h3><p class="loc">Karur</p><p class="makes">New Aruvimalar / Samex / Balaji — custom cotton/canvas drawstring, screen-print.</p><div class="rows"><div><b>Price</b><span>₹45–150/pc</span></div><div><b>MOQ</b><span>500–2000</span></div></div><div class="contact">via IndiaMART / ExportersIndia <span class="flag">⚑</span></div></div>
-      <div class="card"><h3>Sowcarpet border cluster</h3><p class="loc">George Town, Chennai</p><p class="makes">Ivory / fancy / zari bands &amp; borders — best worked in person.</p><div class="rows"><div><b>Price</b><span>₹20–350/m</span></div><div><b>MOQ</b><span>unknown</span></div></div><div class="contact">☎ +91-7942968848 / 8047833451 <span class="flag">⚑ verify identity</span></div></div>
+      <div class="card star"><h3><span class="s">⭐</span>Zion Laser</h3><p class="loc">Tambaram, Chennai</p><p class="makes">Wood engraving / custom wooden tags &amp; charms · 5,000+ designs · low MOQ.</p><div class="rows"><div><b>Price</b><span>quote</span></div><div><b>MOQ</b><span>low</span></div></div><div class="contact">☎ +91-9841154571 (direct) · zionlaserindia@gmail.com · 📧 draft ready</div></div>
+      <div class="card star"><h3><span class="s">⭐</span>BMP Labels (Bharat Metal Process)</h3><p class="loc">Porur, Chennai</p><p class="makes">Custom engraved brass tokens/tags — core business (name/date personalisation).</p><div class="rows"><div><b>Price</b><span>quote</span></div><div><b>MOQ</b><span>ask</span></div></div><div class="contact">☎ 044 2476 2531 / +91 98404 17286 (direct) · contact@bmplabels.com · 📧 draft ready</div></div>
+      <div class="card"><h3>Sri Murugan / Signtrade</h3><p class="loc">Padi &amp; Guindy, Chennai</p><p class="makes">Laser + CNC engrave/cut on wood/acrylic, job-work from your art.</p><div class="rows"><div><b>Price</b><span>quote</span></div><div><b>MOQ</b><span>low</span></div></div><div class="contact">☎ +91 98414 95727 · 9840 870 835 (direct)</div></div>
+      <div class="card"><h3>Blank buttons/toggles</h3><p class="loc">Chennai / Channapatna (KA)</p><p class="makes">If needed, buy blank wooden buttons/toggles (₹1–5) to send for engraving. Lalumal Sons; A To Z (Channapatna).</p><div class="rows"><div><b>Price</b><span>₹1–5/pc</span></div><div><b>MOQ</b><span>~1000</span></div></div><div class="contact">lalumalsons.in · via TradeIndia <span class="flag">⚑</span></div></div>
     </div>
   </section>
 
-  <!-- 3 TRIMS -->
+  <!-- 3 TAGS -->
   <section>
-    <div class="sec-head"><span class="n">3</span><h2>Tassels, cords &amp; trims</h2><span class="hub">Tiruppur · Komarapalayam · Sowcarpet</span></div>
+    <div class="sec-head"><span class="n">3</span><h2>Hang tags, care &amp; provenance cards</h2><span class="hub">Sivakasi · Chennai boutiques · Avinashi (seed paper)</span></div>
     <div class="grid">
-      <div class="card star"><h3><span class="s">⭐</span>Onesos Trim</h3><p class="loc">Tiruppur</p><p class="makes">Handmade silk tassels (7"), golden fringe · colours.</p><div class="rows"><div><b>Price</b><span>tassel ₹5; fringe ₹25/m</span></div><div><b>MOQ</b><span>100</span></div></div><div class="contact">☎ 08043891003 <span class="flag">⚑</span> · onesostrim.in</div></div>
-      <div class="card"><h3>Shree Gopalakrishna Co. (1952)</h3><p class="loc">Komarapalayam, Namakkal</p><p class="makes">Cotton wax cord, twisted cord, nada, tape, rope.</p><div class="rows"><div><b>Price</b><span>get latest</span></div><div><b>MOQ</b><span>25 kg (wax cord)</span></div></div><div class="contact">☎ 0804766404589 <span class="flag">⚑</span> · shreegopalakrishnacompany.com</div></div>
-      <div class="card"><h3>VISWAK TEX</h3><p class="loc">Komarapalayam / Namakkal</p><p class="makes">Cotton draw cords, bag-handle rope · many colours, custom lengths.</p><div class="rows"><div><b>Price</b><span>~₹4 (unit unclear)</span></div><div><b>MOQ</b><span>unknown</span></div></div><div class="contact">☎ 08071792938 <span class="flag">⚑</span> · viswaktex.com</div></div>
-      <div class="card"><h3>M V Enterprises</h3><p class="loc">Sowcarpet, Chennai</p><p class="makes">Golden zari border lace, stone/fancy border trims.</p><div class="rows"><div><b>Price</b><span>unknown</span></div><div><b>MOQ</b><span>unknown</span></div></div><div class="contact">re-open IndiaMART listing <span class="flag">⚑ 429</span></div></div>
-    </div>
-  </section>
-
-  <!-- 4 WOOD -->
-  <section>
-    <div class="sec-head"><span class="n">4</span><h2>Wooden buttons, toggles &amp; engraved tags</h2><span class="hub">Chennai · Coimbatore · (Channapatna adj.)</span></div>
-    <div class="grid">
-      <div class="card star"><h3><span class="s">⭐</span>Zion Laser</h3><p class="loc">Tambaram, Chennai</p><p class="makes">Wood engraving / custom wooden mementos &amp; tags · 5,000+ designs, 20+ yrs · low MOQ.</p><div class="rows"><div><b>Price</b><span>quote</span></div><div><b>MOQ</b><span>low</span></div></div><div class="contact">☎ +91-9841154571 (direct) · zionlaserindia@gmail.com · zionlaser.com</div></div>
-      <div class="card"><h3>Sri Murugan Engraving</h3><p class="loc">Padi, Chennai</p><p class="makes">Laser engrave/cut on wood, job-work from your art.</p><div class="rows"><div><b>Price</b><span>quote</span></div><div><b>MOQ</b><span>low</span></div></div><div class="contact">☎ +91 98414 95727 (direct) · info@laserengravingsite.com</div></div>
-      <div class="card"><h3>Signtrade (Laser Sign Works)</h3><p class="loc">Guindy, Chennai</p><p class="makes">Laser + CNC engrave/cut wood/acrylic/leather.</p><div class="rows"><div><b>Price</b><span>quote</span></div><div><b>MOQ</b><span>low</span></div></div><div class="contact">☎ 9840 945 865 / 9840 870 835 (direct) · info@signtrade.in</div></div>
-      <div class="card"><h3>Mahalaxmi Impex</h3><p class="loc">MKB Nagar, Chennai</p><p class="makes">Wooden shape/fancy buttons (garment grade).</p><div class="rows"><div><b>Price</b><span>₹40–50/gross</span></div><div><b>MOQ</b><span>60–120 gross</span></div></div><div class="contact">☎ +91-8043807832 <span class="flag">⚑</span> · mahalaxmiimpex.net</div></div>
-      <div class="card"><h3>Lalumal Sons</h3><p class="loc">Vepery, Chennai</p><p class="makes">Wooden &amp; coconut buttons · custom designs.</p><div class="rows"><div><b>Price</b><span>~₹1/pc</span></div><div><b>MOQ</b><span>1000</span></div></div><div class="contact">☎ 0804776756884 <span class="flag">⚑</span> · lalumalsons.in</div></div>
-      <div class="card"><h3>A To Z Wooden Handicrafts <span class="flag">adj.</span></h3><p class="loc">Channapatna, Karnataka</p><p class="makes">Turned wooden buttons, many shapes; 50k/wk capacity.</p><div class="rows"><div><b>Price</b><span>~₹5/pc</span></div><div><b>MOQ</b><span>1000</span></div></div><div class="contact">via TradeIndia "View Number" <span class="flag">⚑</span></div></div>
-    </div>
-  </section>
-
-  <!-- 5 TAGS -->
-  <section>
-    <div class="sec-head"><span class="n">5</span><h2>Hang tags, care cards &amp; labels</h2><span class="hub">Sivakasi · Chennai boutiques · Avinashi (seed paper)</span></div>
-    <div class="grid">
-      <div class="card star"><h3><span class="s">⭐</span>Safire Offset Printers</h3><p class="loc">Sivakasi</p><p class="makes">Cards, tags, labels — foil, emboss, letterpress, spot-UV, laser/die-cut · linen/cotton/vellum.</p><div class="rows"><div><b>Price</b><span>quote</span></div><div><b>MOQ</b><span>ask (Sivakasi = high vol)</span></div></div><div class="contact">☎ +91 98430 88901 / 98431 88501 (direct) · sales@safireprint.com</div></div>
-      <div class="card"><h3>Lotus Exclusive Invitations</h3><p class="loc">T. Nagar, Chennai</p><p class="makes">Handcrafted cards &amp; return gifts · foil/emboss/laser · personalised.</p><div class="rows"><div><b>Price</b><span>quote</span></div><div><b>MOQ</b><span>unknown</span></div></div><div class="contact">☎ +91 98410 33877 (direct) · lotusweddingcards@gmail.com</div></div>
-      <div class="card"><h3>Anantmaya</h3><p class="loc">Adyar, Chennai</p><p class="makes">Luxury bespoke invites + return gifts &amp; bags · foil/emboss/laser/velvet.</p><div class="rows"><div><b>Price</b><span>quote</span></div><div><b>MOQ</b><span>unknown</span></div></div><div class="contact">☎ +91 78240 88999 (direct) · info@anantmaya.com</div></div>
-      <div class="card"><h3>Reign Green / Seedballs</h3><p class="loc">Avinashi, Tiruppur</p><p class="makes">Seed-paper printed tags &amp; plantable stationery · custom branding.</p><div class="rows"><div><b>Price</b><span>~₹45 (seed+tag)</span></div><div><b>MOQ</b><span>50 sheets</span></div></div><div class="contact">☎ 08047638629 / +91 96558 94545 · seed-balls.in</div></div>
+      <div class="card star"><h3><span class="s">⭐</span>Safire Offset Printers</h3><p class="loc">Sivakasi</p><p class="makes">Cards, tags, labels — foil, emboss, letterpress, spot-UV, laser/die-cut · linen/cotton/vellum.</p><div class="rows"><div><b>Price</b><span>quote</span></div><div><b>MOQ</b><span>ask</span></div></div><div class="contact">☎ +91 98430 88901 (direct) · sales@safireprint.com · 📧 draft ready</div></div>
+      <div class="card"><h3>Lotus Invitations / Anantmaya</h3><p class="loc">T. Nagar &amp; Adyar, Chennai</p><p class="makes">Handcrafted / luxury cards &amp; return gifts · foil/emboss/laser · personalised.</p><div class="rows"><div><b>Price</b><span>quote</span></div><div><b>MOQ</b><span>unknown</span></div></div><div class="contact">☎ +91 98410 33877 · +91 78240 88999 (direct)</div></div>
+      <div class="card"><h3>Reign Green / Seedballs</h3><p class="loc">Avinashi, Tiruppur</p><p class="makes">Seed-paper printed tags &amp; plantable stationery · custom branding.</p><div class="rows"><div><b>Price</b><span>~₹45</span></div><div><b>MOQ</b><span>50 sheets</span></div></div><div class="contact">☎ 08047638629 / +91 96558 94545 · seed-balls.in</div></div>
       <div class="card"><h3>Tiruppur hang-tag cluster</h3><p class="loc">Tiruppur</p><p class="makes">Prime Trims, Oskar Labels &amp; others — swing tags, kraft board, die-cut.</p><div class="rows"><div><b>Price</b><span>₹0.65–50/pc</span></div><div><b>MOQ</b><span>varies</span></div></div><div class="contact">individual IndiaMART listings <span class="flag">⚑</span></div></div>
     </div>
   </section>
 
-  <!-- 6 BOXES -->
+  <!-- 4 BOXES -->
   <section>
-    <div class="sec-head"><span class="n">6</span><h2>Kraft &amp; rigid gift boxes (+ tissue, fill, ribbon)</h2><span class="hub">Chennai · Sivakasi</span></div>
+    <div class="sec-head"><span class="n">4</span><h2>Kraft &amp; rigid gift box (+ tissue, fill, ribbon)</h2><span class="hub">Chennai · Sivakasi</span></div>
     <div class="grid">
       <div class="card star"><h3><span class="s">⭐</span>Citiprints</h3><p class="loc">Mylapore, Chennai</p><p class="makes">Rigid / magnetic / kraft gift boxes · recycled kraft liners, biodegradable options · small premium lots.</p><div class="rows"><div><b>Price</b><span>₹60–225/box</span></div><div><b>MOQ</b><span>magnetic 100</span></div></div><div class="contact">☎ +91-8047690163 <span class="flag">⚑</span> · citiprints.in</div></div>
+      <div class="card"><h3>Moorthy Offset Printers (1960)</h3><p class="loc">Sivakasi</p><p class="makes">Kraft corrugated &amp; die-cut boxes · food-grade, offset print.</p><div class="rows"><div><b>Price</b><span>~₹90 (verify)</span></div><div><b>MOQ</b><span>ask</span></div></div><div class="contact">☎ +91 94433 82793 (direct) · ramesh@moorthyoffset.com · 📧 draft ready</div></div>
       <div class="card"><h3>Boxpert</h3><p class="loc">Sivakasi</p><p class="makes">Set-up / rigid gift boxes, flap-open · custom print.</p><div class="rows"><div><b>Price</b><span>quote</span></div><div><b>MOQ</b><span>500</span></div><div><b>Lead</b><span>7–10 days</span></div></div><div class="contact">☎ +91 99444 16446 (direct) · boxpert.in</div></div>
-      <div class="card"><h3>Moorthy Offset Printers (1960)</h3><p class="loc">Sivakasi</p><p class="makes">Kraft corrugated &amp; die-cut boxes · food-grade, offset print.</p><div class="rows"><div><b>Price</b><span>dbl-wall ~₹90 (verify)</span></div><div><b>MOQ</b><span>ask</span></div></div><div class="contact">☎ +91 94433 82793 / 99405 01090 (direct) · ramesh@moorthyoffset.com</div></div>
-      <div class="card"><h3>EKO Paper Products</h3><p class="loc">Avadi, Chennai</p><p class="makes">100% biodegradable, custom-branded tissue paper (inner wrap).</p><div class="rows"><div><b>Price</b><span>quote</span></div><div><b>MOQ</b><span>soft &gt;200 packs</span></div></div><div class="contact">☎ / WhatsApp +91-805-650-0440 (direct) · ekopaperproducts@gmail.com</div></div>
-      <div class="card"><h3>Ribbon — Sowcarpet cluster</h3><p class="loc">Chennai</p><p class="makes">Satin ribbon, 245 colours, custom length (Giove ₹150/roll @470; Sanghvi/Bombay for small lots).</p><div class="rows"><div><b>Price</b><span>₹150/roll</span></div><div><b>MOQ</b><span>470 rolls (negotiate)</span></div></div><div class="contact">via TradeIndia <span class="flag">⚑</span></div></div>
-      <div class="card"><h3>Void fill <span class="flag">gap</span></h3><p class="loc">no TN wood-wool maker</p><p class="makes">Wood-wool from Gujarat/Bangalore (₹4/kg base) — or switch to local kraft crinkle fill / dyed korai shred / dried petals.</p><div class="rows"><div><b>Price</b><span>₹4/kg</span></div><div><b>MOQ</b><span>unknown</span></div></div><div class="contact">IndiaMART routed <span class="flag">⚑</span> · consider on-brand natural fill instead</div></div>
+      <div class="card"><h3>EKO Paper Products</h3><p class="loc">Avadi, Chennai</p><p class="makes">100% biodegradable, custom-branded tissue (inner wrap) + eco fill.</p><div class="rows"><div><b>Price</b><span>quote</span></div><div><b>MOQ</b><span>soft</span></div></div><div class="contact">☎ +91-805-650-0440 (direct) · ekopaperproducts@gmail.com · 📧 draft ready</div></div>
+      <div class="card"><h3>Ribbon — Sowcarpet cluster</h3><p class="loc">Chennai</p><p class="makes">Satin ribbon, 245 colours, custom length (small lots via Sanghvi/Bombay Agencies).</p><div class="rows"><div><b>Price</b><span>₹150/roll</span></div><div><b>MOQ</b><span>negotiate</span></div></div><div class="contact">via TradeIndia <span class="flag">⚑</span></div></div>
+      <div class="card note"><h3>Void fill <span class="flag">gap</span></h3><p class="makes">No TN wood-wool maker (Gujarat/Bangalore, ₹4/kg). Better on-brand option: <b>dyed korai shred or dried marigold/petals</b> — local, plastic-free.</p></div>
     </div>
   </section>
 
-  <!-- 7 CLOSURES -->
+  <!-- 5 BRASS -->
   <section>
-    <div class="sec-head"><span class="n">7</span><h2>Closures — zippers &amp; hardware</h2><span class="hub">Chennai (brass / antique-brass)</span></div>
+    <div class="sec-head"><span class="n">5</span><h2>Brass keepsake (accent / premium filler)</h2><span class="hub">Nachiarkoil · Swamimalai · Chennai</span></div>
     <div class="grid">
-      <div class="card star"><h3><span class="s">⭐</span>Zipper Company</h3><p class="loc">Anna Nagar, Chennai</p><p class="makes">Antique-brass metal zippers for purse/bags (featured).</p><div class="rows"><div><b>Price</b><span>slider ₹5–15</span></div><div><b>MOQ</b><span>500 (close-end)</span></div></div><div class="contact">"Chandan" via ExportersIndia form <span class="flag">⚑</span></div></div>
-      <div class="card"><h3>Zip Industries Ltd (1956)</h3><p class="loc">Egmore, Chennai</p><p class="makes">Metal brass zippers, coil/plastic zippers.</p><div class="rows"><div><b>Price</b><span>quote</span></div><div><b>MOQ</b><span>unknown</span></div></div><div class="contact">M. Ramesh · "View Number" TradeIndia <span class="flag">⚑</span></div></div>
-      <div class="card"><h3>IDEAL Fastener (India)</h3><p class="loc">MEPZ Tambaram, Chennai</p><p class="makes">Metal/coil/recycled zippers (global brand).</p><div class="rows"><div><b>Price</b><span>on request</span></div><div><b>MOQ</b><span>unknown</span></div></div><div class="contact">☎ +91 44 2262 2050 <span class="flag">⚑ verify</span></div></div>
-      <div class="card"><h3>Lalumal Sons</h3><p class="loc">Vepery, Chennai</p><p class="makes">Brass/zinc buckles, rings, adjusters, finishes.</p><div class="rows"><div><b>Price</b><span>₹6–48/pc</span></div><div><b>MOQ</b><span>300–1000</span></div></div><div class="contact">☎ 0804776756884 <span class="flag">⚑</span> · lalumalsons.in</div></div>
-      <div class="card"><h3>Industrial Connections (1990)</h3><p class="loc">SIDCO Thirumudivakkam, Chennai</p><p class="makes">Rings, snap hooks, cord/twist locks, buckles · customization.</p><div class="rows"><div><b>Price</b><span>~₹550 (basis unclear)</span></div><div><b>MOQ</b><span>100</span></div><div><b>Lead</b><span>7 days</span></div></div><div class="contact">S. Elamathi · WhatsApp via TradeIndia <span class="flag">⚑</span></div></div>
-      <div class="card"><h3>Metalware Corporation <span class="flag">adj.</span></h3><p class="loc">Noida, UP (ships)</p><p class="makes">Premium brass bag hardware (supplies Coach, Levi's) · strong custom.</p><div class="rows"><div><b>Price</b><span>quote</span></div><div><b>MOQ</b><span>unknown</span></div></div><div class="contact">☎ +91-9560249544 (direct) · sales@metalwarecorporation.com</div></div>
-    </div>
-  </section>
-
-  <!-- 8 BRASS -->
-  <section>
-    <div class="sec-head"><span class="n">8</span><h2>Brass keepsakes &amp; engraving</h2><span class="hub">Nachiarkoil · Swamimalai · Chennai</span></div>
-    <div class="grid">
-      <div class="card"><h3>Vilakku Makers (Udhaya Metals)</h3><p class="loc">Nachiyarkoil, Kumbakonam</p><p class="makes">GI Nachiyarkoil brass lamps/diyas · bulk-order line. (Large-lamp prices ≠ gift-scale.)</p><div class="rows"><div><b>Price</b><span>get gift-scale quote</span></div><div><b>MOQ</b><span>unknown</span></div></div><div class="contact">☎ +91-74181 90625 (direct) · support@vilakkumakers.com</div></div>
-      <div class="card"><h3>Padmanabha Handicrafts (1995)</h3><p class="loc">Swamimalai</p><p class="makes">GI Panchaloha bronze idols, lamps · custom lost-wax work.</p><div class="rows"><div><b>Price</b><span>quote</span></div><div><b>MOQ</b><span>unknown</span></div></div><div class="contact">☎ 0435 2454390 / +91 9500347378 (direct, WhatsApp) · padmanabhahandicrafts.com</div></div>
-      <div class="card star"><h3><span class="s">⭐</span>BMP Labels (Bharat Metal Process)</h3><p class="loc">Porur, Chennai</p><p class="makes">Custom engraved brass nameplates / tokens / tags — core business (name/date personalisation).</p><div class="rows"><div><b>Price</b><span>quote</span></div><div><b>MOQ</b><span>ask</span></div></div><div class="contact">☎ 044 2476 2531 / +91 98404 17286 (direct) · contact@bmplabels.com</div></div>
-      <div class="card"><h3>Poompuhar / TNHDC <span class="flag">route</span></h3><p class="loc">Anna Salai, Chennai</p><p class="makes">Govt brass/bronze range · B2B buyer programme · sources across GI clusters.</p><div class="rows"><div><b>Price</b><span>catalogue</span></div><div><b>MOQ</b><span>B2B</span></div></div><div class="contact">☎ +91 6369229354 · info@poompuhar.com</div></div>
+      <div class="card"><h3>Vilakku Makers (Udhaya Metals)</h3><p class="loc">Nachiyarkoil, Kumbakonam</p><p class="makes">GI Nachiyarkoil brass lamps/diyas · bulk line. (Ask gift-scale, not large ceremonial pairs.)</p><div class="rows"><div><b>Price</b><span>gift-scale quote</span></div><div><b>MOQ</b><span>unknown</span></div></div><div class="contact">☎ +91-74181 90625 (direct) · support@vilakkumakers.com · 📧 draft ready</div></div>
+      <div class="card"><h3>Padmanabha Handicrafts (1995)</h3><p class="loc">Swamimalai</p><p class="makes">GI Panchaloha bronze idols, lamps · custom lost-wax work.</p><div class="rows"><div><b>Price</b><span>quote</span></div><div><b>MOQ</b><span>unknown</span></div></div><div class="contact">☎ 0435 2454390 / +91 9500347378 (direct)</div></div>
+      <div class="card"><h3>Poompuhar / TNHDC <span class="flag">route</span></h3><p class="loc">Anna Salai, Chennai</p><p class="makes">Govt brass/bronze range · B2B buyer programme · sources across GI clusters.</p><div class="rows"><div><b>Price</b><span>catalogue</span></div><div><b>MOQ</b><span>B2B</span></div></div><div class="contact">☎ +91 6369229354 · info@poompuhar.com · 📧 draft ready</div></div>
       <div class="card"><h3>Ganga Industries</h3><p class="loc">Chennai</p><p class="makes">Brass kumkum &amp; sindoor boxes (trader/wholesaler).</p><div class="rows"><div><b>Price</b><span>unknown</span></div><div><b>MOQ</b><span>unknown</span></div></div><div class="contact">re-open IndiaMART listing <span class="flag">⚑</span></div></div>
     </div>
   </section>
 
-  <!-- 9 FILLINGS -->
+  <!-- 6 FILLINGS -->
   <section>
-    <div class="sec-head"><span class="n">9</span><h2>Fillings — soap · seed · sweets · candle · incense</h2><span class="hub">Coimbatore · Chennai · Sivakasi</span></div>
+    <div class="sec-head"><span class="n">6</span><h2>Fillings — soap · seed · sweets · candle · incense</h2><span class="hub">Coimbatore · Chennai · Sivakasi</span></div>
     <div class="grid">
       <div class="card"><h3>Genius Nature Herbs</h3><p class="loc">Coimbatore</p><p class="makes">Natural cold-process handmade soap.</p><div class="rows"><div><b>Price</b><span>~₹38/unit</span></div><div><b>MOQ</b><span>50</span></div></div><div class="contact">indiamart.com/genius-natureherbs <span class="flag">⚑</span></div></div>
-      <div class="card"><h3>Pepaa Products</h3><p class="loc">Coimbatore</p><p class="makes">Plantable seed-paper cards &amp; eco stationery · custom print.</p><div class="rows"><div><b>Price</b><span>A5 card ~₹45</span></div><div><b>MOQ</b><span>ask</span></div></div><div class="contact">☎ +91 8048952967 (direct) · pepaaproducts</div></div>
+      <div class="card"><h3>Pepaa Products</h3><p class="loc">Coimbatore</p><p class="makes">Plantable seed-paper cards &amp; eco stationery · custom print.</p><div class="rows"><div><b>Price</b><span>~₹45</span></div><div><b>MOQ</b><span>ask</span></div></div><div class="contact">☎ +91 8048952967 (direct) · pepaaproducts</div></div>
       <div class="card"><h3>House of Candles</h3><p class="loc">Avadi, Chennai</p><p class="makes">Soy/scented wedding return-gift candles · private label.</p><div class="rows"><div><b>Price</b><span>₹85–120/pc</span></div><div><b>MOQ</b><span>100</span></div></div><div class="contact">indiamart.com/house-of-candles <span class="flag">⚑</span></div></div>
-      <div class="card"><h3>Lucky Sweets</h3><p class="loc">Chennai</p><p class="makes">Milk/ghee sweets &amp; savouries · custom boxes · no MOQ. (Fresh = short shelf-life.)</p><div class="rows"><div><b>Price</b><span>₹99–220/250g</span></div><div><b>MOQ</b><span>none</span></div></div><div class="contact">☎ +91 88709 82400 (direct) · luckysweets.in</div></div>
+      <div class="card"><h3>Lucky Sweets</h3><p class="loc">Chennai</p><p class="makes">Milk/ghee sweets &amp; savouries · custom boxes · no MOQ. (Fresh = short shelf-life.)</p><div class="rows"><div><b>Price</b><span>₹99–220/250g</span></div><div><b>MOQ</b><span>none</span></div></div><div class="contact">☎ +91 88709 82400 (direct) · rahulsingh@luckysweets.in · 📧 draft ready</div></div>
       <div class="card"><h3>Asia Match / Ashic (incense)</h3><p class="loc">Sivakasi</p><p class="makes">Premium incense sticks · custom scent &amp; branded packs.</p><div class="rows"><div><b>Price</b><span>quote</span></div><div><b>MOQ</b><span>unknown</span></div></div><div class="contact">asiamatch.in · ashicagarbatti.com</div></div>
-      <div class="card"><h3>Chennai Green Nuts &amp; Spices</h3><p class="loc">Chennai</p><p class="makes">Dry-fruit gift boxes/hampers · long shelf-life · logo/message.</p><div class="rows"><div><b>Price</b><span>quote</span></div><div><b>MOQ</b><span>~25 boxes</span></div></div><div class="contact">chennaigreen.com enquiry form</div></div>
+      <div class="card"><h3>Seed Paper India <span class="flag">adj.</span></h3><p class="loc">Bengaluru, Karnataka (ships)</p><p class="makes">Plantable seed-paper tags &amp; favours · custom branding.</p><div class="rows"><div><b>Price</b><span>quote</span></div><div><b>MOQ</b><span>ask</span></div></div><div class="contact">☎ +91 6364699837 · seedpaperindia@gmail.com · 📧 draft ready</div></div>
     </div>
   </section>
 
@@ -197,20 +157,20 @@
   <section>
     <div class="sec-head"><span class="n">+</span><h2>Suggested additions to the collection</h2></div>
     <div class="grid">
-      <div class="card"><h3>Branded sew-in label</h3><p class="makes">Woven/satin "uru" label stitched into every keepsake (Tiruppur woven-label makers).</p></div>
-      <div class="card"><h3>Maker's provenance card</h3><p class="makes">Names the cluster &amp; the woman who wove it — powers "Signed by Hand." Near-zero cost via §5 printers.</p></div>
-      <div class="card"><h3>Seed-paper plantable tag</h3><p class="makes">The hang tag becomes a gift — reinforces "no plastic / outlasts the day" (Pepaa, Reign Green).</p></div>
+      <div class="card"><h3>Branded sew-in label</h3><p class="makes">Woven/satin "uru" label stitched into every keepsake (now part of the finished-bag spec).</p></div>
+      <div class="card"><h3>Maker's provenance card</h3><p class="makes">Names the cluster &amp; the woman who wove it — powers "Signed by Hand." Near-zero cost via §3 printers.</p></div>
+      <div class="card"><h3>Seed-paper plantable tag</h3><p class="makes">The hang tag becomes a gift — reinforces "no plastic / outlasts the day."</p></div>
       <div class="card"><h3>Muslin dust wrap</h3><p class="makes">Cotton wrap around the keepsake inside the box — premium, plastic-free unboxing.</p></div>
       <div class="card"><h3>Engraved brass initials charm</h3><p class="makes">Tied to the cord — cross-sell with BMP Labels; high perceived value.</p></div>
-      <div class="card"><h3>Natural void fill</h3><p class="makes">Dyed korai shred or dried marigold instead of wood-wool — on-brand, solves the no-TN-wood-wool gap.</p></div>
-      <div class="card"><h3>Branded twill ribbon / wax seal</h3><p class="makes">"uru" printed ribbon or wax seal for the box close (Sowcarpet printed-ribbon).</p></div>
+      <div class="card"><h3>Natural void fill</h3><p class="makes">Dyed korai shred or dried marigold instead of wood-wool — on-brand, solves the no-TN gap.</p></div>
+      <div class="card"><h3>Branded twill ribbon / wax seal</h3><p class="makes">"uru" printed ribbon or wax seal for the box close.</p></div>
       <div class="card"><h3>Fragrance sachet</h3><p class="makes">Incense/potpourri tucked in the weave (Sivakasi) — scent memory of the day.</p></div>
-      <div class="card"><h3>Own hand-stamp</h3><p class="makes">A rubber/brass stamp you own to press names/dates on kraft tags in-studio — personalisation without a per-order vendor.</p></div>
+      <div class="card"><h3>Own hand-stamp</h3><p class="makes">A rubber/brass stamp you own to press names/dates on kraft tags in-studio.</p></div>
     </div>
   </section>
 
   <footer>
-    Every price/MOQ/lead time is indicative and must be re-quoted. Virtual (⚑) numbers route through IndiaMART/TradeIndia — confirm direct lines on first contact. No supplier contacted; outreach drafts &amp; full sources in <code>research/tamil-nadu-sourcing.md</code>. Compiled 27 Jul 2026 for Uru Studio.
+    Every price/MOQ/lead time is indicative and must be re-quoted. Virtual (⚑) numbers route through IndiaMART/TradeIndia — confirm direct lines on first contact. 10 enquiry drafts (📧) are saved in Gmail, signed by Raagul, asking for MOQ · price · catalogue · lead time. Full sources in <code>research/tamil-nadu-sourcing.md</code>. Compiled 27 Jul 2026 for Uru Studio.
   </footer>
 </div>
 </body>
