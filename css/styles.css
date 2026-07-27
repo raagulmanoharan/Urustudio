@@ -782,10 +782,6 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 1rem); }
 @media (max-width: 900px) { .steps { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 560px) { .steps { grid-template-columns: 1fr; } }
 
-/* closing line of How it Works — a sentence, not a second module, so the
-   section reads as one unit (process + how it's shaped) */
-.how__close { margin-top: clamp(1.75rem, 3.5vw, 2.75rem); max-width: 44rem; color: var(--color-muted); font-size: 1.05rem; line-height: 1.75; }
-
 /* Proof — pull-quotes */
 .proof .eyebrow { margin-bottom: clamp(2rem, 4vw, 3rem); }
 .pullquote { margin: 0 0 clamp(3rem, 7vw, 6rem); max-width: 46rem; }
