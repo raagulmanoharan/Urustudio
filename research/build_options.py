@@ -18,7 +18,7 @@ def uri(path, maxw=680, q=80):
 
 # section: (title, note, [ (path, name, descriptor, size) ... ])
 SECTIONS = [
- ("Bags","The website collection, shown in its own product photos. Interior sizes indicative.",[
+ ("Bags","The website collection — six styles to choose from, in its own product photos. Interior sizes indicative.",[
    (f"{REPO}/images/p-thamboolam-potli.jpg","Drawstring Koodai","Rust &amp; beige korai · cinch top","~15 × 15 cm"),
    (f"{REPO}/images/p-thamboolam-bag.jpg","Thamboolam Bag","Terracotta &amp; ivory · open tote","~18 × 14 cm"),
    (f"{REPO}/images/p-marigold.jpg","Marigold Tote","Korai · rust band · open","~16 × 16 cm"),
@@ -26,31 +26,49 @@ SECTIONS = [
    (f"{REPO}/images/p-clutch.jpg","Reed Clutch","Fine korai · zip close","~20 × 12 cm"),
    (f"{REPO}/images/p-flap.jpg","Flap Bag","Natural korai · wooden button","~17 × 12 cm"),
  ]),
- ("Kraft-box treats","Kraft window boxes, as on the website. Fresh items made near the date.",[
+ ("Sweets &amp; treats","Kraft window boxes, as on the website. Pick one or mix — fresh items made near the date.",[
    (f"{OPT}/kw-sweets.png","Assorted Sweets","Mysore pak · peda · burfi · laddu","~10 cm box"),
-   (f"{OPT}/kw-laddu.png","Laddu","Besan laddu","~10 cm box"),
+   (f"{OPT}/kw-mysorepak.png","Mysore Pak","Ghee sweet","~10 cm box"),
+   (f"{OPT}/kw-kajukatli.png","Kaju Katli","Cashew fudge · silver leaf","~10 cm box"),
+   (f"{OPT}/kw-laddu.png","Besan Laddu","Festive sweet","~10 cm box"),
+   (f"{OPT}/kw-adhirasam.png","Adhirasam","Jaggery-rice sweet","~10 cm box"),
    (f"{OPT}/kw-murukku.png","Murukku &amp; Mixture","Savoury","~10 cm box"),
    (f"{OPT}/kw-dryfruit.png","Dry Fruit &amp; Nuts","Almond · cashew · raisin","~10 cm box"),
+   (f"{OPT}/kw-dates.png","Stuffed Dates","Nut-filled","~10 cm box"),
    (f"{OPT}/kw-toffee.png","Toffee &amp; Chocolate","Foil-wrapped","~10 cm box"),
  ]),
  ("Brass","Plain smooth brass, as on the website. Small and gift-scale; made to order.",[
+   (f"{OPT}/br2-tumbler.png","Brass Tumbler","Chombu · drinking cup","~8 cm"),
+   (f"{OPT}/br2-pot.png","Brass Pot","Small chombu / kalasham","~8 cm"),
    (f"{OPT}/br2-diya.png","Brass Diya","Oil lamp","~6 cm"),
    (f"{OPT}/br2-kumkum.png","Kumkum &amp; Turmeric Pots","Lidded brass pots","~4 cm each"),
    (f"{OPT}/br2-leaf.png","Betel-leaf Plate","Brass leaf tray","~10 cm"),
    (f"{OPT}/br2-bowl.png","Brass Bowl","Small round bowl","~7 cm"),
+   (f"{OPT}/br2-bell.png","Pooja Bell","Brass hand bell","~6 cm"),
    (f"{OPT}/br2-incense.png","Incense Holder","Brass, scallop form","~8 cm"),
    (f"{OPT}/br2-spoons.png","Measuring Spoons","Brass, set of four","set"),
    (f"{OPT}/br2-box.png","Lidded Box","Round brass box","~5 cm"),
    (f"{OPT}/br2-dish.png","Keepsake Dish","Brass tray · keys &amp; rings","~10 cm"),
  ]),
- ("Keepsakes &amp; extras","Deckled paper, cloth and woven pieces — the things that get kept and used.",[
+ ("Fragrance &amp; light","Scented options for the set.",[
+   (f"{OPT}/ot2-agarbatti.png","Agarbatti","Incense sticks","short bundle"),
+   (f"{OPT}/ot2-sambrani.png","Sambrani Cups","Dhoop incense","4–6 cups"),
+   (f"{OPT}/ot2-candle.png","Candle","Soy · small cup","~5 cm"),
+   (f"{OPT}/ot2-attar.png","Attar Roll-on","Jasmine / sandal / oudh","~5 cm"),
+ ]),
+ ("Grow &amp; green","Plantable options — a favour that keeps growing.",[
    (f"{OPT}/ot2-seedcard.png","Seed-paper Card","Deckled · botanical sprig","~5 × 7 cm"),
-   (f"{OPT}/ot2-tag.png","Paper Tags","Deckled · jute string","~5 × 7 cm"),
+   (f"{OPT}/ot2-seedballs.png","Seed Balls","Tulsi / marigold","3–5 balls"),
+   (f"{OPT}/ot2-seedpacket.png","Seed Packet","Herb &amp; flower seeds","~5 g"),
+ ]),
+ ("Keepsakes &amp; extras","Deckled paper, cloth and woven pieces — the things that get kept and used.",[
    (f"{OPT}/ot2-coasters.png","Coasters","Woven rattan · set of four","~9 cm"),
    (f"{OPT}/ot2-napkin.png","Cotton Napkin","Rust check · napkin or wrap","folds ~10 cm"),
    (f"{OPT}/ot2-muslin.png","Muslin Pouch","Drawstring · natural","~10 cm"),
    (f"{OPT}/ot2-gajra.png","Jasmine Gajra","Fresh jasmine","small ring"),
+   (f"{OPT}/ot2-coconut.png","Coconut","Whole, for the tray","1 pc"),
    (f"{OPT}/ot2-soap.png","Handmade Soap","Sandalwood / jasmine","~60 g bar"),
+   (f"{OPT}/ot2-tag.png","Paper Tags","Deckled · jute string","~5 × 7 cm"),
  ]),
 ]
 
@@ -97,7 +115,7 @@ footer{{margin-top:2.6rem;padding-top:1.2rem;border-top:1px solid var(--line);co
 </style></head><body><div class="wrap">
 <header class="top">
   <h1>Options</h1>
-  <p class="sub">An extended catalog of the set, in the website's own design language — the bags, and what goes inside. Made to order, gift-scale, no plastic in the gift. Everything indicative and confirmed per order.</p>
+  <p class="sub">A catalog to choose from, in the website's own design language — pick a bag, then the fills that suit the occasion. Made to order, gift-scale, no plastic in the gift. Everything indicative and confirmed per order.</p>
 </header>
 {BODY}
 <footer>Uru · handwoven return-gift sets, made to order in Tamil Nadu · uru.studio · hello@uru.studio. Bags shown in the website's product photos; other items shown as gift-scale references. Sizes, availability and price confirmed per batch.</footer>
